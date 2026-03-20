@@ -4,6 +4,7 @@ import Pillars from "@/components/Pillars";
 import Products from "@/components/Products";
 import WhyUs from "@/components/WhyUs";
 import Coverage from "@/components/Coverage";
+import OnboardingForm from "@/components/OnboardingForm";
 import CTAFinal from "@/components/CTAFinal";
 import Footer from "@/components/Footer";
 
@@ -17,6 +18,7 @@ export default function Home() {
         <Products />
         <WhyUs />
         <Coverage />
+        <OnboardingForm />
         <CTAFinal />
       </main>
       <Footer />

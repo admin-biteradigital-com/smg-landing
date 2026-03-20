@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>SMG — Bueno, Rico y Barato</title>
+  <meta name="description" content="Distribución de golosinas y snacks en la Región de Los Lagos. Frutillar, Llanquihue, Puerto Varas, Puerto Montt y Carretera Austral hasta Hornopirén. Autoventa directa, precios competitivos, variedad garantizada."/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;600;700;800&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet"/>
+  <style>
+    :root{--navy:#1C2B3A;--navy-deep:#111D28;--navy-mid:#243447;--orange:#F47920;--orange-dk:#D4651A;--white:#FFFFFF;--off-white:#F8F9FB;--slate:#E2E8F0;--muted:#8FA3B8;}
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+    html{scroll-behavior:smooth;}
+    body{font-family:"Sora",system-ui,sans-serif;background:var(--off-white);color:var(--navy);overflow-x:hidden;}
+    img{display:block;max-width:100%;}
+    a{text-decoration:none;color:inherit;}
+    .container{max-width:1140px;margin:0 auto;padding:0 28px;}
+    .reveal{opacity:0;transform:translateY(24px);transition:opacity .6s ease,transform .6s ease;}
+    .reveal.visible{opacity:1;transform:none;}
+    /* NAV */
+    nav{position:sticky;top:0;z-index:100;background:rgba(17,29,40,.97);backdrop-filter:blur(14px);border-bottom:1px solid rgba(244,121,32,.22);}
+    .nav-inner{display:flex;align-items:center;justify-content:space-between;height:64px;}
+    .nav-logo{height:34px;filter:brightness(0) invert(1);}
+    .btn-wa-sm{display:inline-flex;align-items:center;gap:8px;background:#25D366;color:#fff;font-weight:700;font-size:.82rem;letter-spacing:.03em;padding:9px 20px;border-radius:100px;transition:transform .2s,box-shadow .2s;white-space:nowrap;}
+    .btn-wa-sm:hover{transform:scale(1.04);box-shadow:0 4px 18px rgba(37,211,102,.32);}
+    .btn-wa-sm svg{width:16px;height:16px;fill:#fff;flex-shrink:0;}
+    /* HERO */
+    .hero{background:var(--navy-deep);position:relative;overflow:hidden;min-height:94vh;display:flex;flex-direction:column;}
+    .hero::after{content:"";position:absolute;inset:0;pointer-events:none;background-image:radial-gradient(rgba(255,255,255,.035) 1px,transparent 1px);background-size:32px 32px;}
+    .hero-glow{position:absolute;top:-200px;right:-200px;width:700px;height:700px;border-radius:50%;background:radial-gradient(circle,rgba(244,121,32,.17) 0%,transparent 65%);pointer-events:none;}
+    .hero-content{position:relative;z-index:2;flex:1;display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:60px;max-width:1140px;margin:0 auto;width:100%;padding:80px 28px;}
+    .eyebrow-line{display:inline-flex;align-items:center;gap:10px;font-size:.73rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--orange);margin-bottom:20px;}
+    .eyebrow-line::before{content:"";width:24px;height:2px;background:var(--orange);border-radius:2px;}
+    .hero-title{font-size:clamp(2.8rem,5.5vw,5rem);font-weight:800;line-height:1.06;letter-spacing:-.022em;color:var(--white);margin-bottom:10px;}
+    .hero-title .oj{color:var(--orange);}
+    .hero-title .it{font-family:"Instrument Serif",serif;font-style:italic;font-weight:400;}
+    .hero-slogan{font-family:"Instrument Serif",serif;font-style:italic;font-size:1.2rem;color:var(--orange);opacity:.9;margin-bottom:22px;}
+    .hero-desc{font-size:.96rem;line-height:1.76;color:var(--muted);max-width:455px;margin-bottom:42px;}
+    .hero-btns{display:flex;gap:14px;flex-wrap:wrap;align-items:center;}
+    .btn-wa{display:inline-flex;align-items:center;gap:10px;background:#25D366;color:#fff;font-weight:700;font-size:.96rem;padding:14px 28px;border-radius:100px;box-shadow:0 6px 24px rgba(37,211,102,.28);transition:transform .2s,box-shadow .2s;}
+    .btn-wa:hover{transform:translateY(-2px) scale(1.03);box-shadow:0 10px 32px rgba(37,211,102,.38);}
+    .btn-wa svg{width:20px;height:20px;fill:#fff;flex-shrink:0;}
+    .btn-ghost{font-weight:600;font-size:.91rem;color:rgba(255,255,255,.55);border:1.5px solid rgba(255,255,255,.14);padding:13px 24px;border-radius:100px;transition:border-color .2s,color .2s;}
+    .btn-ghost:hover{border-color:var(--orange);color:var(--orange);}
+    .hero-visual{display:flex;justify-content:center;align-items:center;position:relative;}
+    .hero-img-wrap{position:relative;width:380px;height:380px;}
+    .ring{position:absolute;border-radius:50%;}
+    .ring-1{inset:-20px;border:1.5px dashed rgba(244,121,32,.3);animation:spin 20s linear infinite;}
+    .ring-2{inset:-44px;border:1px dashed rgba(244,121,32,.1);animation:spin 34s linear infinite reverse;}
+    @keyframes spin{to{transform:rotate(360deg);}}
+    .hero-img{width:380px;height:380px;border-radius:50%;object-fit:contain;padding:20px;background:rgba(255,255,255,.03);border:2px solid rgba(244,121,32,.14);animation:float 5s ease-in-out infinite;filter:drop-shadow(0 20px 60px rgba(244,121,32,.2));}
+    @keyframes float{0%,100%{transform:translateY(0);}50%{transform:translateY(-14px);}}
+    .hero-dot{position:absolute;top:28px;right:4px;width:20px;height:20px;border-radius:50%;background:var(--orange);box-shadow:0 0 0 6px rgba(244,121,32,.15);animation:pulse 2.6s ease-in-out infinite;}
+    @keyframes pulse{0%,100%{box-shadow:0 0 0 6px rgba(244,121,32,.15);}50%{box-shadow:0 0 0 14px rgba(244,121,32,.05);}}
+    .hero-stats{position:relative;z-index:2;border-top:1px solid rgba(255,255,255,.055);}
+    .stats-inner{display:grid;grid-template-columns:repeat(3,1fr);max-width:1140px;margin:0 auto;padding:0 28px;}
+    .stat{padding:26px 0;border-right:1px solid rgba(255,255,255,.055);}
+    .stat:last-child{border-right:none;}
+    .stat-n{font-size:1.9rem;font-weight:800;color:var(--orange);line-height:1;}
+    .stat-l{font-size:.76rem;color:var(--muted);margin-top:4px;}
+    /* SECTIONS */
+    .eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:.72rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--orange);margin-bottom:12px;}
+    .eyebrow::before{content:"";width:20px;height:2px;background:var(--orange);border-radius:2px;}
+    .sec-title{font-size:clamp(2rem,3.5vw,2.9rem);font-weight:800;line-height:1.1;letter-spacing:-.02em;margin-bottom:12px;}
+    .sec-sub{font-size:.96rem;line-height:1.76;color:var(--muted);max-width:550px;}
+    /* PILARES */
+    .pilares{background:var(--off-white);padding:100px 0;}
+    .sec-head{text-align:center;margin-bottom:56px;}
+    .pilar-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;}
+    .pilar{background:var(--white);border:1.5px solid var(--slate);border-radius:20px;padding:40px 32px;position:relative;overflow:hidden;transition:border-color .25s,transform .25s,box-shadow .25s;}
+    .pilar::after{content:"";position:absolute;bottom:0;left:0;right:0;height:3px;background:var(--orange);transform:scaleX(0);transform-origin:left;transition:transform .35s;}
+    .pilar:hover{border-color:rgba(244,121,32,.38);transform:translateY(-6px);box-shadow:0 16px 48px rgba(28,43,58,.1);}
+    .pilar:hover::after{transform:scaleX(1);}
+    .pilar-icon{width:54px;height:54px;border-radius:13px;background:rgba(244,121,32,.08);display:flex;align-items:center;justify-content:center;font-size:1.55rem;margin-bottom:20px;}
+    .pilar-title{font-size:1.12rem;font-weight:700;color:var(--navy);margin-bottom:9px;}
+    .pilar-text{font-size:.88rem;line-height:1.76;color:#607080;}
+    /* PRODUCTOS */
+    .productos{background:var(--navy);padding:100px 0;}
+    .prod-head{margin-bottom:50px;}
+    .prod-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:13px;}
+    .prod-item{border:1.5px solid rgba(244,121,32,.17);border-radius:14px;padding:26px 18px;text-align:center;transition:background .2s,border-color .2s,transform .2s;cursor:default;}
+    .prod-item:hover{background:rgba(244,121,32,.09);border-color:var(--orange);transform:scale(1.04);}
+    .prod-icon{font-size:2rem;margin-bottom:10px;}
+    .prod-name{font-size:.91rem;font-weight:700;color:var(--white);margin-bottom:2px;}
+    .prod-sub{font-size:.74rem;color:var(--muted);}
+    /* POR QUE */
+    .porque{background:var(--off-white);padding:100px 0;}
+    .porque-grid{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center;}
+    .razones{display:flex;flex-direction:column;gap:22px;margin-top:36px;}
+    .razon{display:flex;gap:16px;align-items:flex-start;}
+    .rdot{flex-shrink:0;margin-top:6px;width:10px;height:10px;border-radius:50%;background:var(--orange);box-shadow:0 0 0 4px rgba(244,121,32,.15);}
+    .razon h4{font-size:.96rem;font-weight:700;color:var(--navy);margin-bottom:3px;}
+    .razon p{font-size:.86rem;line-height:1.72;color:#607080;}
+    .porque-panel{background:var(--navy);border-radius:24px;padding:52px 44px;position:relative;overflow:hidden;}
+    .porque-panel::before{content:"";position:absolute;bottom:-80px;right:-80px;width:260px;height:260px;border-radius:50%;background:radial-gradient(circle,rgba(244,121,32,.2) 0%,transparent 65%);}
+    .panel-slogan{font-family:"Instrument Serif",serif;font-style:italic;font-size:3rem;line-height:1.05;color:var(--orange);margin-bottom:18px;}
+    .panel-text{font-size:.91rem;line-height:1.76;color:var(--muted);margin-bottom:30px;}
+    .panel-hr{border:none;border-top:1px solid rgba(255,255,255,.07);margin-bottom:26px;}
+    .panel-label{font-size:.7rem;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:var(--muted);margin-bottom:14px;}
+    /* COBERTURA */
+    .cobertura{background:var(--white);border-top:3px solid var(--orange);padding:80px 0;}
+    .cob-inner{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:48px;}
+    .cob-title{font-size:1.85rem;font-weight:800;letter-spacing:-.018em;color:var(--navy);margin-bottom:10px;}
+    .cob-desc{font-size:.91rem;line-height:1.76;color:#607080;max-width:480px;margin-bottom:20px;}
+    .zonas{display:flex;flex-wrap:wrap;gap:9px;}
+    .zona{font-size:.79rem;font-weight:600;padding:6px 14px;border-radius:100px;background:var(--off-white);color:var(--navy);border:1.5px solid var(--slate);transition:border-color .2s,color .2s;}
+    .zona:hover{border-color:var(--orange);color:var(--orange);}
+    .zona.hl{background:rgba(244,121,32,.07);border-color:rgba(244,121,32,.4);color:var(--orange-dk);}
+    /* CTA FINAL */
+    .cta-final{background:var(--navy-deep);padding:110px 0;text-align:center;position:relative;overflow:hidden;}
+    .cta-glow{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:600px;height:600px;border-radius:50%;background:radial-gradient(circle,rgba(244,121,32,.13) 0%,transparent 65%);pointer-events:none;}
+    .cta-inner{position:relative;z-index:1;}
+    .cta-title{font-size:clamp(2.2rem,4.5vw,3.9rem);font-weight:800;letter-spacing:-.022em;color:var(--white);margin-bottom:14px;}
+    .cta-title .oj{color:var(--orange);}
+    .cta-desc{font-size:.98rem;line-height:1.76;color:var(--muted);max-width:500px;margin:0 auto 44px;}
+    .btn-wa-lg{display:inline-flex;align-items:center;gap:12px;background:#25D366;color:#fff;font-weight:700;font-size:1.04rem;padding:17px 40px;border-radius:100px;box-shadow:0 8px 30px rgba(37,211,102,.32);transition:transform .2s,box-shadow .2s;}
+    .btn-wa-lg:hover{transform:translateY(-3px) scale(1.03);box-shadow:0 14px 40px rgba(37,211,102,.42);}
+    .btn-wa-lg svg{width:24px;height:24px;fill:#fff;flex-shrink:0;}
+    .cta-note{font-size:.78rem;color:rgba(255,255,255,.28);margin-top:18px;}
+    /* FOOTER */
+    footer{background:#0A1420;padding:30px 28px;text-align:center;}
+    .footer-logo{height:26px;filter:brightness(0) invert(1) opacity(.35);margin:0 auto 10px;}
+    footer p{font-size:.76rem;color:rgba(255,255,255,.22);}
+    footer a{color:var(--orange);opacity:.5;}
+    footer a:hover{opacity:1;}
+    /* RESPONSIVE */
+    @media(max-width:960px){
+      .hero-content{grid-template-columns:1fr;text-align:center;gap:48px;padding:70px 28px;}
+      .hero-visual{order:-1;}
+      .hero-img-wrap,.hero-img{width:260px;height:260px;}
+      .eyebrow-line,.eyebrow{justify-content:center;}
+      .hero-btns{justify-content:center;}
+      .hero-desc,.sec-sub{margin:0 auto;}
+      .stats-inner{grid-template-columns:1fr;}
+      .stat{border-right:none;border-bottom:1px solid rgba(255,255,255,.055);padding:18px 0;}
+      .stat:last-child{border-bottom:none;}
+      .pilar-grid{grid-template-columns:1fr;}
+      .prod-grid{grid-template-columns:repeat(2,1fr);}
+      .porque-grid{grid-template-columns:1fr;gap:48px;}
+      .cob-inner{flex-direction:column;text-align:center;}
+      .zonas{justify-content:center;}
+    }
+    @media(max-width:480px){
+      .btn-wa-sm span{display:none;}
+      .nav-logo{height:26px;}
+    }
+
+    .cta-zona { border-color: var(--amber) !important; color: var(--amber) !important; font-style: italic; cursor: pointer; }
+    .cta-zona:hover { background: rgba(196,126,42,.12); }
+  </style>
+</head>
+<body>
+
+<nav>
+  <div class="container nav-inner">
+    <img src="assets/PortadaSMG.png" alt="SMG" class="nav-logo"/>
+    <a href="https://wa.me/56985144771?text=Hola%20SMG%2C%20quiero%20consultar" class="btn-wa-sm" target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+      <span>Escribinos</span>
+    </a>
+  </div>
+</nav>
+
+<section class="hero">
+  <div class="hero-glow"></div>
+  <div class="hero-content">
+    <div class="hero-text reveal">
+      <div class="eyebrow-line">Chamiza &middot; Región de Los Lagos &middot; Chile</div>
+      <h1 class="hero-title">Golosinas que<br/><span class="oj it">llegan</span> a tu<br/>negocio</h1>
+      <p class="hero-slogan">"Bueno, Rico y Barato."</p>
+      <p class="hero-desc">Distribución directa de golosinas y snacks en ruta. Variedad de productos, precios competitivos y entrega puntual donde tu negocio lo necesita.</p>
+      <div class="hero-btns">
+        <a href="https://wa.me/56985144771?text=Hola%20SMG%2C%20quiero%20pedir%20productos" class="btn-wa" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          Pedir por WhatsApp
+        </a>
+        <a href="#productos" class="btn-ghost">Ver productos ↓</a>
+      </div>
+    </div>
+    <div class="hero-visual reveal">
+      <div class="hero-img-wrap">
+        <div class="ring ring-1"></div>
+        <div class="ring ring-2"></div>
+        <img src="assets/PerfilSMG.png" alt="SMG" class="hero-img"/>
+        <div class="hero-dot"></div>
+      </div>
+    </div>
+  </div>
+  <div class="hero-stats">
+    <div class="stats-inner">
+      <div class="stat reveal"><div class="stat-n">+100</div><div class="stat-l">Productos disponibles</div></div>
+      <div class="stat reveal"><div class="stat-n">Rutas</div><div class="stat-l">Cobertura regional directa</div></div>
+      <div class="stat reveal"><div class="stat-n">DTE</div><div class="stat-l">Facturación electrónica SII</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="pilares" id="nosotros">
+  <div class="container">
+    <div class="sec-head reveal">
+      <div class="eyebrow" style="justify-content:center">¿Qué ofrecemos?</div>
+      <h2 class="sec-title" style="color:var(--navy)">El sabor que llega a tu negocio</h2>
+      <p class="sec-sub">Autoventa directa. Sin intermediarios, con productos frescos y precios que convienen desde el primer pedido.</p>
+    </div>
+    <div class="pilar-grid">
+      <div class="pilar reveal"><div class="pilar-icon">🍬</div><div class="pilar-title">Variedad garantizada</div><p class="pilar-text">Golosinas, chocolates, chicles, caramelos, snacks y más. Surtido pensado para que tu local siempre tenga lo que tus clientes buscan.</p></div>
+      <div class="pilar reveal"><div class="pilar-icon">🚐</div><div class="pilar-title">Autoventa en ruta</div><p class="pilar-text">Llegamos directamente a tu puerta. Rutas regulares en Chamiza y la región para que nunca te falte mercadería en el momento justo.</p></div>
+      <div class="pilar reveal"><div class="pilar-icon">💲</div><div class="pilar-title">Precios competitivos</div><p class="pilar-text">Bueno, rico y barato no es solo un slogan. Trabajamos con márgenes reales para que tu negocio gane y tus clientes vuelvan.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="productos" id="productos">
+  <div class="container">
+    <div class="prod-head reveal">
+      <div class="eyebrow">Catálogo</div>
+      <h2 class="sec-title" style="color:var(--white)">Productos que se venden solos</h2>
+      <p class="sec-sub">Marcas reconocidas y productos que rotan rápido en almacenes, kioscos, minimarkets y botillerías.</p>
+    </div>
+    <div class="prod-grid">
+      <div class="prod-item reveal"><div class="prod-icon">🍫</div><div class="prod-name">Chocolates</div><div class="prod-sub">Barras, bombones, tabletas</div></div>
+      <div class="prod-item reveal"><div class="prod-icon">🍭</div><div class="prod-name">Caramelos</div><div class="prod-sub">Duros, blandos, rellenos</div></div>
+      <div class="prod-item reveal"><div class="prod-icon">🫧</div><div class="prod-name">Chicles</div><div class="prod-sub">Displays y unidades</div></div>
+      <div class="prod-item reveal"><div class="prod-icon">🥨</div><div class="prod-name">Snacks</div><div class="prod-sub">Palitos, papas, maní</div></div>
+      <div class="prod-item reveal"><div class="prod-icon">🍬</div><div class="prod-name">Gomitas</div><div class="prod-sub">Surtidas por bolsa</div></div>
+      <div class="prod-item reveal"><div class="prod-icon">🧁</div><div class="prod-name">Alfajores</div><div class="prod-sub">Individuales y cajas</div></div>
+      <div class="prod-item reveal"><div class="prod-icon">🍿</div><div class="prod-name">Confites</div><div class="prod-sub">Variedad de colores y sabores</div></div>
+      <div class="prod-item reveal"><div class="prod-icon">📦</div><div class="prod-name">Combos</div><div class="prod-sub">Packs armados para kioscos</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="porque" id="porque">
+  <div class="container porque-grid">
+    <div class="reveal">
+      <div class="eyebrow">¿Por qué elegirnos?</div>
+      <h2 class="sec-title" style="color:var(--navy)">Más que un proveedor,<br/>un socio de tu negocio</h2>
+      <p class="sec-sub" style="margin:0">Trabajamos con negocios de todos los tamaños. Tu pedido es importante sin importar si sos un almacén de barrio o una cadena de kioscos.</p>
+      <div class="razones">
+        <div class="razon reveal"><div class="rdot"></div><div><h4>Entrega directa en tu local</h4><p>Sin que tengas que moverte. El camión llega hasta vos con todo lo que pediste.</p></div></div>
+        <div class="razon reveal"><div class="rdot"></div><div><h4>Productos frescos, control de vencimiento</h4><p>Sistema FEFO: los productos más próximos a vencer salen primero. Calidad garantizada.</p></div></div>
+        <div class="razon reveal"><div class="rdot"></div><div><h4>Facturación electrónica incluida</h4><p>Boleta o factura electrónica en cada venta. Todo en regla con el SII, sin vueltas.</p></div></div>
+        <div class="razon reveal"><div class="rdot"></div><div><h4>Atención directa por WhatsApp</h4><p>Hablás directo con nosotros. Pedido, consulta o reclamo: respondemos en minutos.</p></div></div>
+      </div>
+    </div>
+    <div class="reveal">
+      <div class="porque-panel">
+        <div class="panel-slogan">"Bueno,<br/>Rico y<br/>Barato."</div>
+        <p class="panel-text">Eso es lo que llevamos a cada ruta. Productos que se venden, a precios que te convienen, con la puntualidad que tu negocio necesita.</p>
+        <hr class="panel-hr"/>
+        <div class="panel-label">Contacto directo</div>
+        <a href="https://wa.me/56985144771?text=Hola%20SMG%2C%20quiero%20consultar" class="btn-wa" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          Escribir ahora
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="cobertura" id="cobertura">
+  <div class="container cob-inner">
+    <div class="reveal">
+      <div class="eyebrow">Zona de servicio</div>
+      <h2 class="cob-title">Región de Los Lagos,<br/>de punta a punta.</h2>
+      <p class="cob-desc">Salimos desde nuestra base en Chamiza y cubrimos el lago, la ciudad y la Carretera Austral. Si tenés un negocio en la región, muy probablemente ya estamos pasando por tu puerta.</p>
+      <div class="zonas">
+        <span class="zona hl">📍 Chamiza — base</span>
+        <span class="zona">📍 Frutillar</span>
+        <span class="zona">📍 Llanquihue</span>
+        <span class="zona">📍 Puerto Varas</span>
+        <span class="zona">📍 Puerto Montt</span>
+        <span class="zona">📍 Quillaipe</span>
+        <span class="zona">📍 Lenca</span>
+        <span class="zona">📍 La Arena</span>
+        <span class="zona">📍 Caleta Puelche</span>
+        <span class="zona">📍 Contao</span>
+        <span class="zona">📍 Hornopirén</span>
+        <span class="zona cta-zona">¿Tu zona no aparece? Consultanos →</span>
+      </div>
+    </div>
+    <div class="reveal" style="text-align:center">
+      <p style="font-size:.87rem;color:#607080;margin-bottom:14px">¿No estás seguro si llegamos?</p>
+      <a href="https://wa.me/56985144771?text=Hola%20SMG%2C%20quiero%20saber%20si%20llegan%20a%20mi%20zona" class="btn-wa" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        Consultar cobertura
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="cta-final">
+  <div class="cta-glow"></div>
+  <div class="container cta-inner reveal">
+    <div class="eyebrow" style="justify-content:center">¿Listo para empezar?</div>
+    <h2 class="cta-title">Tu primer pedido a un<br/><span class="oj">mensaje</span> de distancia</h2>
+    <p class="cta-desc">Escribinos por WhatsApp y te contamos cómo incorporar SMG como tu proveedor. Sin contratos complicados, sin mínimos difíciles.</p>
+    <a href="https://wa.me/56985144771?text=Hola%20SMG%2C%20quiero%20hacer%20mi%20primer%20pedido" class="btn-wa-lg" target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+      Pedir por WhatsApp
+    </a>
+    <p class="cta-note">Respondemos en horario comercial · Chamiza, Región de Los Lagos</p>
+  </div>
+</section>
+
+<footer>
+  <img src="assets/PortadaSMG.png" alt="SMG" class="footer-logo"/>
+  <p>Chamiza, Región de Los Lagos, Chile &middot; &copy; 2025 SMG &middot; Todos los derechos reservados</p>
+  <p style="margin-top:6px">Desarrollado por <a href="https://biteradigital.com" target="_blank">Bitera Digital</a></p>
+</footer>
+
+<script>
+  const io = new IntersectionObserver(entries => {
+    entries.forEach(e => { if(e.isIntersecting){ e.target.classList.add("visible"); io.unobserve(e.target); }});
+  },{threshold:0.1,rootMargin:"0px 0px -30px 0px"});
+  document.querySelectorAll(".reveal").forEach((el,i)=>{
+    el.style.transitionDelay=`${(i%4)*0.08}s`;
+    io.observe(el);
+  });
+  setTimeout(()=>document.querySelectorAll(".hero .reveal").forEach(el=>el.classList.add("visible")),150);
+</script>
+</body>
+</html>

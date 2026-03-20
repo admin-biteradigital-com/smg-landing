@@ -1,0 +1,1177 @@
+{
+  "total_products": 98,
+  "total_categories": 25,
+  "macro_categories": {
+    "Chocolates": [
+      "TRENTO",
+      "BEL",
+      "MONTEVERGINE",
+      "MANTECOL",
+      "ENTRE RIOS",
+      "TALENTO (Garoto)",
+      "BUONO CUORE / JAZAM"
+    ],
+    "Snacks & Galletas": [
+      "RICHESTER",
+      "MARILAN / PIT STOP",
+      "KRYZPO"
+    ],
+    "Chicles": [
+      "FREEGELLS - Gum Chicles",
+      "TNT (Riclan)",
+      "BLONG (Peccin)",
+      "BUZZY CROC"
+    ],
+    "Pastillas": [
+      "FREEGELLS - Pastillas",
+      "POCKET (Balas)"
+    ],
+    "Gomitas & Chupetines": [
+      "GO! JELLY (Riclan)",
+      "GOMUTCHO",
+      "POP BOOM (Peccin)",
+      "BERBAU MIX"
+    ],
+    "Café & Bebidas": [
+      "GOLD CAFE",
+      "EXTRA LIFE"
+    ],
+    "Repostería": [
+      "REPOSTERIA - COLORETI",
+      "REPOSTERIA - JAZAM CHOCOMAIS"
+    ],
+    "Caramelos & Tubitos": [
+      "JAZAM - TUBITOS"
+    ]
+  },
+  "catalog": {
+    "TRENTO": [
+      {
+        "sku": "TRE-001",
+        "name": "Trento Momentos Display 24u",
+        "price": null,
+        "offer_price": null,
+        "description": "Mini Chocolates Trento. Caja: 24 displays. Display: 12 unidades (192 gr). Unidad: 16 gr. Sabores variados.",
+        "country": "Brasil",
+        "photo": "TRE-001.jpg",
+        "notes": "Display $4.100",
+        "is_new": false
+      },
+      {
+        "sku": "TRE-002a",
+        "name": "Trento Bites Chocolate 120gr",
+        "price": null,
+        "offer_price": null,
+        "description": "38% cacao. Wafer relleno bolsa 120 gr. Caja: 20 pouch.",
+        "country": "Brasil",
+        "photo": "TRE-002a.jpg",
+        "notes": "Pouch $1.950",
+        "is_new": false
+      },
+      {
+        "sku": "TRE-002b",
+        "name": "Trento Bites Avellana 120gr",
+        "price": null,
+        "offer_price": null,
+        "description": "38% cacao. Wafer relleno bolsa 120 gr. Caja: 20 pouch.",
+        "country": "Brasil",
+        "photo": "TRE-002b.jpg",
+        "notes": "Pouch $1.950",
+        "is_new": false
+      },
+      {
+        "sku": "TRE-003",
+        "name": "Trento Pistachos 29gr Display 16u",
+        "price": null,
+        "offer_price": null,
+        "description": "Wafer relleno sabor pistacho. Display: 16 unidades (464 gr).",
+        "country": "Brasil",
+        "photo": "TRE-003.jpg",
+        "notes": "Display $8.800",
+        "is_new": false
+      },
+      {
+        "sku": "TRE-004a",
+        "name": "Trento Chocolate 29gr Display 16u",
+        "price": null,
+        "offer_price": null,
+        "description": "38% cacao. Caja: 8 displays. Display: 16 unidades (464 gr). Unidad: 29 gr.",
+        "country": "Brasil",
+        "photo": "TRE-004a.jpg",
+        "notes": "Display $8.800",
+        "is_new": false
+      },
+      {
+        "sku": "TRE-004b",
+        "name": "Trento Avellana 29gr Display 16u",
+        "price": null,
+        "offer_price": null,
+        "description": "38% cacao. Caja: 8 displays. Display: 16 unidades (464 gr). Unidad: 29 gr.",
+        "country": "Brasil",
+        "photo": "TRE-004b.jpg",
+        "notes": "Display $8.800",
+        "is_new": false
+      },
+      {
+        "sku": "TRE-004c",
+        "name": "Trento Dark 29gr Display 16u",
+        "price": null,
+        "offer_price": null,
+        "description": "55% cacao. Caja: 8 displays. Display: 16 unidades (464 gr). Unidad: 29 gr.",
+        "country": "Brasil",
+        "photo": "TRE-004c.jpg",
+        "notes": "Display $8.800",
+        "is_new": false
+      },
+      {
+        "sku": "TRE-005a",
+        "name": "Trento Trufa de Chocolate 29gr Display 16u - NUEVO",
+        "price": null,
+        "offer_price": null,
+        "description": "38% cacao. Wafer relleno trufa. Caja: 8 displays. Display: 16 unidades (464 gr).",
+        "country": "Brasil",
+        "photo": "TRE-005a.jpg",
+        "notes": "Display $8.800",
+        "is_new": true
+      },
+      {
+        "sku": "TRE-005b",
+        "name": "Trento Caramelo 29gr Display 16u - NUEVO",
+        "price": null,
+        "offer_price": null,
+        "description": "38% cacao. Wafer relleno caramelo. Caja: 8 displays. Display: 16 unidades (464 gr).",
+        "country": "Brasil",
+        "photo": "TRE-005b.jpg",
+        "notes": "Display $8.800",
+        "is_new": true
+      },
+      {
+        "sku": "TRE-006a",
+        "name": "Trento Cheesecake de Frutilla 29gr Display 16u",
+        "price": null,
+        "offer_price": null,
+        "description": "Chocolate blanco. Caja: 8 displays. Display: 16 unidades (464 gr). Unidad: 29 gr.",
+        "country": "Brasil",
+        "photo": "TRE-006a.jpg",
+        "notes": "Display $8.800",
+        "is_new": false
+      },
+      {
+        "sku": "TRE-006b",
+        "name": "Trento Torta de Limon 29gr Display 16u",
+        "price": null,
+        "offer_price": null,
+        "description": "Chocolate blanco. Caja: 8 displays. Display: 16 unidades (464 gr). Unidad: 29 gr.",
+        "country": "Brasil",
+        "photo": "TRE-006b.jpg",
+        "notes": "Display $8.800",
+        "is_new": false
+      },
+      {
+        "sku": "TRE-006c",
+        "name": "Trento Mousse de Maracuya 29gr Display 16u",
+        "price": null,
+        "offer_price": null,
+        "description": "Chocolate blanco. Caja: 8 displays. Display: 16 unidades (464 gr). Unidad: 29 gr.",
+        "country": "Brasil",
+        "photo": "TRE-006c.jpg",
+        "notes": "Display $8.800",
+        "is_new": false
+      },
+      {
+        "sku": "TRE-007a",
+        "name": "Trento Massimo Nut 25gr Display 15u",
+        "price": null,
+        "offer_price": null,
+        "description": "Wafer relleno cubierto mix frutos secos (caju, avellana, mani). 38% cacao. Caja: 8 displays. Display: 15 unidades (375 gr).",
+        "country": "Brasil",
+        "photo": "TRE-007a.jpg",
+        "notes": "Display $8.200",
+        "is_new": false
+      },
+      {
+        "sku": "TRE-007b",
+        "name": "Trento Massimo Brownie 25gr Display 15u",
+        "price": null,
+        "offer_price": null,
+        "description": "Wafer relleno brownie, cubierto galleta y chocolate 38% cacao. Caja: 8 displays. Display: 15 unidades (375 gr).",
+        "country": "Brasil",
+        "photo": "TRE-007b.jpg",
+        "notes": "Display $8.200",
+        "is_new": false
+      },
+      {
+        "sku": "TRE-008a",
+        "name": "Trento Dark Chocolate Blanco 29gr Display 16u",
+        "price": null,
+        "offer_price": null,
+        "description": "Caja: 8 displays. Display: 16 unidades (480 gr). Unidad: 30 gr.",
+        "country": "Brasil",
+        "photo": "TRE-008a.jpg",
+        "notes": "Display $8.800",
+        "is_new": false
+      },
+      {
+        "sku": "TRE-008b",
+        "name": "Trento Milk 29gr Display 16u",
+        "price": null,
+        "offer_price": null,
+        "description": "38% cacao. Caja: 8 displays. Display: 16 unidades (480 gr). Unidad: 30 gr.",
+        "country": "Brasil",
+        "photo": "TRE-008b.jpg",
+        "notes": "Display $8.800",
+        "is_new": false
+      },
+      {
+        "sku": "TRE-009a",
+        "name": "Trento Allegro Chocolate + Mani 26gr - NUEVO",
+        "price": null,
+        "offer_price": null,
+        "description": "38% cacao. Caja: 8 displays. Display: 16 unidades (416 gr). Unidad: 26 gr.",
+        "country": "Brasil",
+        "photo": "TRE-009a.jpg",
+        "notes": "Display $8.800",
+        "is_new": true
+      },
+      {
+        "sku": "TRE-009b",
+        "name": "Trento Allegro Chocolate Oscuro + Mani 26gr - NUEVO",
+        "price": null,
+        "offer_price": null,
+        "description": "55% cacao. Caja: 8 displays. Display: 16 unidades (416 gr). Unidad: 26 gr.",
+        "country": "Brasil",
+        "photo": "TRE-009b.jpg",
+        "notes": "Display $8.800",
+        "is_new": true
+      },
+      {
+        "sku": "TRE-010a",
+        "name": "Trento Massimo Cookies y Chocolate Blanco 25gr",
+        "price": null,
+        "offer_price": null,
+        "description": "Wafer relleno chocolate, cubierto galleta y choc. blanco. Caja: 8 displays. Display: 15 unidades (375 gr).",
+        "country": "Brasil",
+        "photo": "TRE-010a.jpg",
+        "notes": "Display $8.200",
+        "is_new": false
+      },
+      {
+        "sku": "TRE-010b",
+        "name": "Trento Massimo Coco 25gr - NUEVO",
+        "price": null,
+        "offer_price": null,
+        "description": "Oblea crujiente + cobertura doble chocolate + trozos de coco. Caja: 8 displays. Display: 15 unidades (375 gr).",
+        "country": "Brasil",
+        "photo": "TRE-010b.jpg",
+        "notes": "Display $8.200",
+        "is_new": true
+      },
+      {
+        "sku": "TRE-011",
+        "name": "Trento Mini Chocolate Bolsa 800gr 50u - NUEVO",
+        "price": null,
+        "offer_price": null,
+        "description": "Bolsa 800 gr con 50 unidades de 16 gr. Caja: 6 bolsas. $276 la unidad.",
+        "country": "Brasil",
+        "photo": "TRE-011.jpg",
+        "notes": "Bolsa $13.800",
+        "is_new": true
+      },
+      {
+        "sku": "TRE-012",
+        "name": "Trento Mini Chocolate Blanco Bolsa 800gr 50u - NUEVO",
+        "price": null,
+        "offer_price": null,
+        "description": "Branco-Dark. Bolsa 800 gr con 50 unidades de 16 gr. Caja: 6 bolsas. $276 la unidad.",
+        "country": "Brasil",
+        "photo": "TRE-012.jpg",
+        "notes": "Bolsa $13.800",
+        "is_new": true
+      }
+    ],
+    "BEL": [
+      {
+        "sku": "BEL-001",
+        "name": "Bel Bombones Surtidos Marshmallow Bolsa 50u",
+        "price": null,
+        "offer_price": null,
+        "description": "Sabores: Uva, Coco, Choco, Moranguete, Leite. Bolsa: 50 unidades (450 gr). Unidad: 9 gr. Caja Master: 16 bolsas.",
+        "country": "Brasil",
+        "photo": "BEL-001.jpg",
+        "notes": "Bolsa $3.400",
+        "is_new": false
+      },
+      {
+        "sku": "BEL-002",
+        "name": "Bel Bombones Surtidos Marshmallow Cajita 12u",
+        "price": null,
+        "offer_price": null,
+        "description": "Sabores: Uva, Coco, Choco, Moranguete, Leite. Cajita: 12 unidades (108 gr). Caja Master: 30 cajitas.",
+        "country": "Brasil",
+        "photo": "BEL-002.jpg",
+        "notes": "Cajita $850",
+        "is_new": false
+      },
+      {
+        "sku": "BEL-003",
+        "name": "Bel Moranguete 13gr Display 36u",
+        "price": null,
+        "offer_price": null,
+        "description": "Chocolate relleno con marshmallow cremoso de frutilla. Display: 36 unidades (468 gr). $95 la unidad.",
+        "country": "Brasil",
+        "photo": "BEL-003.jpg",
+        "notes": "Display $3.400 - Unidad $95",
+        "is_new": false
+      }
+    ],
+    "MONTEVERGINE": [
+      {
+        "sku": "MON-001a",
+        "name": "Montevergine Bombones Cereza 55gr",
+        "price": null,
+        "offer_price": null,
+        "description": "Cajita 55 gr. COD 2051.",
+        "country": "Argentina",
+        "photo": "MON-001a.jpg",
+        "notes": "Cajita $1.250",
+        "is_new": false
+      },
+      {
+        "sku": "MON-001b",
+        "name": "Montevergine Bombones Chocolate 55gr",
+        "price": null,
+        "offer_price": null,
+        "description": "Cajita 55 gr. COD 2851.",
+        "country": "Argentina",
+        "photo": "MON-001b.jpg",
+        "notes": "Cajita $1.250",
+        "is_new": false
+      },
+      {
+        "sku": "MON-001c",
+        "name": "Montevergine Bombones Avellana 55gr",
+        "price": null,
+        "offer_price": null,
+        "description": "Cajita 55 gr. COD 2371.",
+        "country": "Argentina",
+        "photo": "MON-001c.jpg",
+        "notes": "Cajita $1.250",
+        "is_new": false
+      },
+      {
+        "sku": "MON-001d",
+        "name": "Montevergine Bombones Trufa 55gr",
+        "price": null,
+        "offer_price": null,
+        "description": "Cajita 55 gr. COD 2761.",
+        "country": "Argentina",
+        "photo": "MON-001d.jpg",
+        "notes": "Cajita $1.250",
+        "is_new": false
+      },
+      {
+        "sku": "MON-001e",
+        "name": "Montevergine Bombones Morango 55gr",
+        "price": null,
+        "offer_price": null,
+        "description": "Cajita 55 gr. COD 2261.",
+        "country": "Argentina",
+        "photo": "MON-001e.jpg",
+        "notes": "Cajita $1.250",
+        "is_new": false
+      },
+      {
+        "sku": "MON-002",
+        "name": "Turron Blando con Mani Bolsa 100u 1kg",
+        "price": null,
+        "offer_price": null,
+        "description": "Caja: 12 bolsas. Bolsa: 100 unidades (1 kg). Unidad: 10 gr.",
+        "country": "Argentina",
+        "photo": "MON-002.jpg",
+        "notes": "Bolsa $6.900",
+        "is_new": false
+      },
+      {
+        "sku": "MON-003",
+        "name": "Turron Blando de Mani 45gr Display 12u",
+        "price": null,
+        "offer_price": null,
+        "description": "Caja: 8 displays. Display: 12 unidades (540 gr). Unidad: 45 gr.",
+        "country": "Argentina",
+        "photo": "MON-003.jpg",
+        "notes": "Display $3.450",
+        "is_new": false
+      }
+    ],
+    "MANTECOL": [
+      {
+        "sku": "MAN-001",
+        "name": "Mantecol Clasico 41gr Display 12u",
+        "price": null,
+        "offer_price": null,
+        "description": "Display: 12 unidades. Unidad: 41 gr.",
+        "country": "Argentina",
+        "photo": "MAN-001.jpg",
+        "notes": "Display $7.300 - Unidad $608",
+        "is_new": false
+      },
+      {
+        "sku": "MAN-002",
+        "name": "Mantecol Oblea 27gr Display 9u",
+        "price": null,
+        "offer_price": null,
+        "description": "Display: 9 unidades. Unidad: 27 gr.",
+        "country": "Argentina",
+        "photo": "MAN-002.jpg",
+        "notes": "Display $8.200 - Unidad $455",
+        "is_new": false
+      },
+      {
+        "sku": "MAN-003",
+        "name": "Mantecol Clasico 111gr",
+        "price": null,
+        "offer_price": null,
+        "description": "Unidad 111 gr. Sin TACC.",
+        "country": "Argentina",
+        "photo": "MAN-003.jpg",
+        "notes": "Unidad $1.210",
+        "is_new": false
+      }
+    ],
+    "ENTRE RIOS": [
+      {
+        "sku": "ENR-001",
+        "name": "Alfajor Doble Entre Rios Dulce de Leche 60gr",
+        "price": null,
+        "offer_price": null,
+        "description": "Triple capa banado. Display: 10 unidades. Unidad: 60 gr.",
+        "country": "Argentina",
+        "photo": "ENR-001.jpg",
+        "notes": "Display $6.200 - Unidad $620",
+        "is_new": false
+      },
+      {
+        "sku": "ENR-002",
+        "name": "Trufas de Cacao Entre Rios Cajita 120gr",
+        "price": null,
+        "offer_price": null,
+        "description": "Cajita 120 gr.",
+        "country": "Argentina",
+        "photo": "ENR-002.jpg",
+        "notes": "Cajita $2.580",
+        "is_new": false
+      }
+    ],
+    "TALENTO (Garoto)": [
+      {
+        "sku": "TAL-001",
+        "name": "Talento Avellana 25gr Display 15u",
+        "price": null,
+        "offer_price": null,
+        "description": "Display: 15 unidades (375 gr). Unidad: 25 gr.",
+        "country": "Brasil",
+        "photo": "TAL-001.jpg",
+        "notes": "Display $7.800 - Unidad $520",
+        "is_new": false
+      },
+      {
+        "sku": "TAL-002",
+        "name": "Talento Almendras y Pasas 25gr Display 15u",
+        "price": null,
+        "offer_price": null,
+        "description": "Display: 15 unidades (375 gr). Unidad: 25 gr.",
+        "country": "Brasil",
+        "photo": "TAL-002.jpg",
+        "notes": "Display $7.800 - Unidad $520",
+        "is_new": false
+      }
+    ],
+    "RICHESTER": [
+      {
+        "sku": "RIC-001",
+        "name": "Galletas Maria Vainilla 350gr",
+        "price": null,
+        "offer_price": null,
+        "description": "Caja: 24 paquetes de 350 gr c/u.",
+        "country": "Brasil",
+        "photo": "RIC-001.jpg",
+        "notes": "Paquete $1.580",
+        "is_new": false
+      }
+    ],
+    "MARILAN / PIT STOP": [
+      {
+        "sku": "PIT-001",
+        "name": "Pit Stop Galletas Saladas Original 137gr",
+        "price": null,
+        "offer_price": null,
+        "description": "6 paquetes por envase (22.8 gr c/u). 137 gr total.",
+        "country": "Brasil",
+        "photo": "PIT-001.jpg",
+        "notes": "Envase $835",
+        "is_new": false
+      },
+      {
+        "sku": "PIT-002",
+        "name": "Pit Stop Galletas Saladas Queso 137gr",
+        "price": null,
+        "offer_price": null,
+        "description": "6 paquetes por envase (22.8 gr c/u). 137 gr total.",
+        "country": "Brasil",
+        "photo": "PIT-002.jpg",
+        "notes": "Envase $835",
+        "is_new": false
+      }
+    ],
+    "KRYZPO": [
+      {
+        "sku": "KRY-001",
+        "name": "Kryzpo Papas Fritas Lata 37gr Original",
+        "price": null,
+        "offer_price": null,
+        "description": "Lata pequena papas fritas. Display 6 unidades.",
+        "country": "Chile",
+        "photo": "KRY-001.jpg",
+        "notes": "Unidad $660 - Display $3.960",
+        "is_new": false
+      },
+      {
+        "sku": "KRY-002",
+        "name": "Kryzpo Papas Fritas Lata 37gr Cebolla",
+        "price": null,
+        "offer_price": null,
+        "description": "Lata pequena papas fritas. Display 6 unidades.",
+        "country": "Chile",
+        "photo": "KRY-002.jpg",
+        "notes": "Unidad $660 - Display $3.960",
+        "is_new": false
+      },
+      {
+        "sku": "KRY-003",
+        "name": "Kryzpo Papas Fritas Lata 37gr Queso",
+        "price": null,
+        "offer_price": null,
+        "description": "Lata pequena papas fritas. Display 6 unidades.",
+        "country": "Chile",
+        "photo": "KRY-003.jpg",
+        "notes": "Unidad $660 - Display $3.960",
+        "is_new": false
+      },
+      {
+        "sku": "KRY-004",
+        "name": "Kryzpo Papas Fritas Lata 37gr Pizza",
+        "price": null,
+        "offer_price": null,
+        "description": "Lata pequena papas fritas. Display 6 unidades.",
+        "country": "Chile",
+        "photo": "KRY-004.jpg",
+        "notes": "Unidad $660 - Display $3.960",
+        "is_new": false
+      },
+      {
+        "sku": "KRY-005",
+        "name": "Kryzpo Papas Fritas Lata Grande 130gr Original",
+        "price": null,
+        "offer_price": null,
+        "description": "Lata grande papas fritas.",
+        "country": "Chile",
+        "photo": "KRY-005.jpg",
+        "notes": "Unidad $1.660",
+        "is_new": false
+      },
+      {
+        "sku": "KRY-006",
+        "name": "Kryzpo Papas Fritas Lata Grande 130gr Cebolla",
+        "price": null,
+        "offer_price": null,
+        "description": "Lata grande papas fritas.",
+        "country": "Chile",
+        "photo": "KRY-006.jpg",
+        "notes": "Unidad $1.660",
+        "is_new": false
+      },
+      {
+        "sku": "KRY-007",
+        "name": "Kryzpo Papas Fritas Lata Grande 130gr Queso",
+        "price": null,
+        "offer_price": null,
+        "description": "Lata grande papas fritas.",
+        "country": "Chile",
+        "photo": "KRY-007.jpg",
+        "notes": "Unidad $1.660",
+        "is_new": false
+      }
+    ],
+    "BUONO CUORE / JAZAM": [
+      {
+        "sku": "JAZ-001",
+        "name": "Palitos de Leche Pote 90u 350gr",
+        "price": null,
+        "offer_price": null,
+        "description": "Caja: 12 potes. Pote: 90 unidades (350 gr). Unidad: 3.75 gr.",
+        "country": "Chile",
+        "photo": "JAZ-001.jpg",
+        "notes": "Pote $3.900",
+        "is_new": false
+      },
+      {
+        "sku": "JAZ-002",
+        "name": "Monedas Chocolate 500 Pesos Chilenos Pote 90u",
+        "price": null,
+        "offer_price": null,
+        "description": "Caja: 12 potes. Pote: 90 unidades (350 gr). Unidad: 3.75 gr.",
+        "country": "Chile",
+        "photo": "JAZ-002.jpg",
+        "notes": "Pote $6.600",
+        "is_new": false
+      }
+    ],
+    "FREEGELLS - Pastillas": [
+      {
+        "sku": "FRE-001a",
+        "name": "Freegells Pastillas Sandia Display 12u",
+        "price": null,
+        "offer_price": null,
+        "description": "Caja: 36 displays. Display: 12 unidades (335 gr). Unidad: 9 pastillas (27.9 gr). Pastilla: 3.1 gr.",
+        "country": "Brasil",
+        "photo": "FRE-001a.jpg",
+        "notes": "Display $2.500",
+        "is_new": false
+      },
+      {
+        "sku": "FRE-001b",
+        "name": "Freegells Pastillas Melon Display 12u",
+        "price": null,
+        "offer_price": null,
+        "description": "Caja: 36 displays. Display: 12 unidades (335 gr). Unidad: 9 pastillas (27.9 gr). Pastilla: 3.1 gr.",
+        "country": "Brasil",
+        "photo": "FRE-001b.jpg",
+        "notes": "Display $2.500",
+        "is_new": false
+      },
+      {
+        "sku": "FRE-002a",
+        "name": "Freegells Pastillas Eucalipto Display 12u",
+        "price": null,
+        "offer_price": null,
+        "description": "Caja: 36 displays. Display: 12 unidades (335 gr). Unidad: 9 pastillas (27.9 gr). Pastilla: 3.1 gr.",
+        "country": "Brasil",
+        "photo": "FRE-002a.jpg",
+        "notes": "Display $2.500",
+        "is_new": false
+      },
+      {
+        "sku": "FRE-002b",
+        "name": "Freegells Pastillas Extra Fuerte Display 12u",
+        "price": null,
+        "offer_price": null,
+        "description": "Caja: 36 displays. Display: 12 unidades (335 gr). Unidad: 9 pastillas (27.9 gr). Pastilla: 3.1 gr.",
+        "country": "Brasil",
+        "photo": "FRE-002b.jpg",
+        "notes": "Display $2.500",
+        "is_new": false
+      },
+      {
+        "sku": "FRE-002c",
+        "name": "Freegells Pastillas Cereza Display 12u",
+        "price": null,
+        "offer_price": null,
+        "description": "Caja: 36 displays. Display: 12 unidades (335 gr). Unidad: 9 pastillas (27.9 gr). Pastilla: 3.1 gr.",
+        "country": "Brasil",
+        "photo": "FRE-002c.jpg",
+        "notes": "Display $2.500",
+        "is_new": false
+      },
+      {
+        "sku": "FRE-002d",
+        "name": "Freegells Pastillas Menta Display 12u",
+        "price": null,
+        "offer_price": null,
+        "description": "Caja: 36 displays. Display: 12 unidades (335 gr). Unidad: 9 pastillas (27.9 gr). Pastilla: 3.1 gr.",
+        "country": "Brasil",
+        "photo": "FRE-002d.jpg",
+        "notes": "Display $2.500",
+        "is_new": false
+      },
+      {
+        "sku": "FRE-003a",
+        "name": "Freegells Pastillas Miel Display 12u",
+        "price": null,
+        "offer_price": null,
+        "description": "Caja: 36 displays. Display: 12 unidades (335 gr). Unidad: 9 pastillas (27.9 gr).",
+        "country": "Brasil",
+        "photo": "FRE-003a.jpg",
+        "notes": "Display $2.500",
+        "is_new": false
+      },
+      {
+        "sku": "FRE-003b",
+        "name": "Freegells Pastillas Citrus Vit-C Display 12u",
+        "price": null,
+        "offer_price": null,
+        "description": "Caja: 36 displays. Display: 12 unidades (335 gr). Unidad: 9 pastillas (27.9 gr).",
+        "country": "Brasil",
+        "photo": "FRE-003b.jpg",
+        "notes": "Display $2.500",
+        "is_new": false
+      },
+      {
+        "sku": "FRE-003c",
+        "name": "Freegells Pastillas Miel Limon Propoleo Display 12u",
+        "price": null,
+        "offer_price": null,
+        "description": "Caja: 36 displays. Display: 12 unidades (335 gr). Unidad: 9 pastillas (27.9 gr).",
+        "country": "Brasil",
+        "photo": "FRE-003c.jpg",
+        "notes": "Display $2.500",
+        "is_new": false
+      }
+    ],
+    "FREEGELLS - Gum Chicles": [
+      {
+        "sku": "FRE-004a",
+        "name": "Freegells Gum Menta Display 15u",
+        "price": null,
+        "offer_price": null,
+        "description": "Caja: 12 displays. Display: 15 unidades (120 gr). Unidad: 5 chicles (8 gr). Pastilla: 1.6 gr.",
+        "country": "Brasil",
+        "photo": "FRE-004a.jpg",
+        "notes": "Display $3.150",
+        "is_new": false
+      },
+      {
+        "sku": "FRE-004b",
+        "name": "Freegells Gum Menta Original Display 15u",
+        "price": null,
+        "offer_price": null,
+        "description": "Caja: 12 displays. Display: 15 unidades (120 gr). Unidad: 5 chicles (8 gr). Pastilla: 1.6 gr.",
+        "country": "Brasil",
+        "photo": "FRE-004b.jpg",
+        "notes": "Display $3.150",
+        "is_new": false
+      },
+      {
+        "sku": "FRE-004c",
+        "name": "Freegells Gum Extra Fuerte Display 15u",
+        "price": null,
+        "offer_price": null,
+        "description": "Caja: 12 displays. Display: 15 unidades (120 gr). Unidad: 5 chicles (8 gr). Pastilla: 1.6 gr.",
+        "country": "Brasil",
+        "photo": "FRE-004c.jpg",
+        "notes": "Display $3.150",
+        "is_new": false
+      },
+      {
+        "sku": "FRE-004d",
+        "name": "Freegells Gum Eucalipto Display 15u",
+        "price": null,
+        "offer_price": null,
+        "description": "Caja: 12 displays. Display: 15 unidades (120 gr). Unidad: 5 chicles (8 gr). Pastilla: 1.6 gr.",
+        "country": "Brasil",
+        "photo": "FRE-004d.jpg",
+        "notes": "Display $3.150",
+        "is_new": false
+      },
+      {
+        "sku": "FRE-005a",
+        "name": "Freegells Gum Sandia Display 15u",
+        "price": null,
+        "offer_price": null,
+        "description": "Caja: 12 displays. Display: 15 unidades (120 gr). Unidad: 5 chicles (8 gr). Pastilla: 1.6 gr.",
+        "country": "Brasil",
+        "photo": "FRE-005a.jpg",
+        "notes": "Display $3.150",
+        "is_new": false
+      },
+      {
+        "sku": "FRE-005b",
+        "name": "Freegells Gum Guinda Display 15u",
+        "price": null,
+        "offer_price": null,
+        "description": "Caja: 12 displays. Display: 15 unidades (120 gr). Unidad: 5 chicles (8 gr). Pastilla: 1.6 gr.",
+        "country": "Brasil",
+        "photo": "FRE-005b.jpg",
+        "notes": "Display $3.150",
+        "is_new": false
+      },
+      {
+        "sku": "FRE-005c",
+        "name": "Freegells Gum Canela Display 15u",
+        "price": null,
+        "offer_price": null,
+        "description": "Caja: 12 displays. Display: 15 unidades (120 gr). Unidad: 5 chicles (8 gr). Pastilla: 1.6 gr.",
+        "country": "Brasil",
+        "photo": "FRE-005c.jpg",
+        "notes": "Display $3.150",
+        "is_new": false
+      }
+    ],
+    "GO! JELLY (Riclan)": [
+      {
+        "sku": "GOJ-001",
+        "name": "Go Jelly Gomitas Platano Bolsa 70gr",
+        "price": null,
+        "offer_price": null,
+        "description": "Caja: 12 bolsas. Bolsa: 70 gr.",
+        "country": "Brasil",
+        "photo": "GOJ-001.jpg",
+        "notes": "Caja $7.800",
+        "is_new": false
+      },
+      {
+        "sku": "GOJ-002",
+        "name": "Go Jelly Gomitas Besos Frutilla Bolsa 70gr",
+        "price": null,
+        "offer_price": null,
+        "description": "Caja: 12 bolsas. Bolsa: 70 gr.",
+        "country": "Brasil",
+        "photo": "GOJ-002.jpg",
+        "notes": "Caja $7.800",
+        "is_new": false
+      },
+      {
+        "sku": "GOJ-003",
+        "name": "Go Jelly Gomitas Dientes Bolsa 70gr",
+        "price": null,
+        "offer_price": null,
+        "description": "Caja: 12 bolsas. Bolsa: 70 gr.",
+        "country": "Brasil",
+        "photo": "GOJ-003.jpg",
+        "notes": "Caja $7.800",
+        "is_new": false
+      },
+      {
+        "sku": "GOJ-004",
+        "name": "Go Jelly Gomitas Frutilla Bolsa 70gr",
+        "price": null,
+        "offer_price": null,
+        "description": "Caja: 12 bolsas. Bolsa: 70 gr.",
+        "country": "Brasil",
+        "photo": "GOJ-004.jpg",
+        "notes": "Caja $7.800",
+        "is_new": false
+      }
+    ],
+    "GOMUTCHO": [
+      {
+        "sku": "GOM-001",
+        "name": "Gomutcho Yogurt Display 30u",
+        "price": null,
+        "offer_price": null,
+        "description": "VEGAN. Tubo: 10 gomitas (31.2 gr). Caja: 15 displays. Display: 30 unidades (936 gr).",
+        "country": "Brasil",
+        "photo": "GOM-001.jpg",
+        "notes": "Display $4.800",
+        "is_new": false
+      },
+      {
+        "sku": "GOM-002",
+        "name": "Gomutcho Surtido Frutas Display 30u",
+        "price": null,
+        "offer_price": null,
+        "description": "VEGAN. Tubo: 10 gomitas (31.2 gr). Caja: 15 displays. Display: 30 unidades (936 gr).",
+        "country": "Brasil",
+        "photo": "GOM-002.jpg",
+        "notes": "Display $4.800",
+        "is_new": false
+      }
+    ],
+    "POCKET (Balas)": [
+      {
+        "sku": "POC-001",
+        "name": "Pocket Coffee Caramelo Sin Azucar Display 12u",
+        "price": null,
+        "offer_price": null,
+        "description": "Zero azucar. Caja: 12 displays. Display: 12 unidades.",
+        "country": "Brasil",
+        "photo": "POC-001.jpg",
+        "notes": "Display $7.400",
+        "is_new": false
+      }
+    ],
+    "TNT (Riclan)": [
+      {
+        "sku": "TNT-001",
+        "name": "TNT Chicle Relleno Acido Super Acido Display 40u",
+        "price": null,
+        "offer_price": null,
+        "description": "Sabores: TuttiFrutti, Frutilla, Naranja. Caja: 20 displays. Display: 40 unidades.",
+        "country": "Brasil",
+        "photo": "TNT-001.jpg",
+        "notes": "Display $2.700",
+        "is_new": false
+      }
+    ],
+    "BLONG (Peccin)": [
+      {
+        "sku": "BLO-001",
+        "name": "Blong Nitroferas Chicle Acido NUEVO",
+        "price": null,
+        "offer_price": null,
+        "description": "COD 15154. 5 gr por unidad. Display: 40 unidades. $62.5 la unidad.",
+        "country": "Brasil",
+        "photo": "BLO-001.jpg",
+        "notes": "Display $2.500 - Unidad $62.5",
+        "is_new": true
+      },
+      {
+        "sku": "BLO-002",
+        "name": "Blong Nitroferas Chicle Ice-Helado NUEVO",
+        "price": null,
+        "offer_price": null,
+        "description": "COD 15155. 5 gr por unidad. Display: 40 unidades. $62.5 la unidad.",
+        "country": "Brasil",
+        "photo": "BLO-002.jpg",
+        "notes": "Display $2.500 - Unidad $62.5",
+        "is_new": true
+      },
+      {
+        "sku": "BLO-003",
+        "name": "Blong Chicle de Bola Relleno Energy NUEVO",
+        "price": null,
+        "offer_price": null,
+        "description": "COD 15152. 5 gr por unidad. Display: 40 unidades. $62.5 la unidad.",
+        "country": "Brasil",
+        "photo": "BLO-003.jpg",
+        "notes": "Display $2.500 - Unidad $62.5",
+        "is_new": true
+      }
+    ],
+    "BUZZY CROC": [
+      {
+        "sku": "BUZ-001",
+        "name": "Buzzy Croc Chicle Crocante Relleno Liquido Display 200u",
+        "price": null,
+        "offer_price": null,
+        "description": "Super crunchy. Sabores: Uva, TuttiFrutti, Frutilla. Caja: 8 displays. Display: 200 unidades (860 gr). Unidad: 4.3 gr.",
+        "country": "Brasil",
+        "photo": "BUZ-001.jpg",
+        "notes": "Display $10.500",
+        "is_new": false
+      }
+    ],
+    "POP BOOM (Peccin)": [
+      {
+        "sku": "POP-001",
+        "name": "Pop Boom Chupetin Chicle Surtido Uva Mango Frutilla Cereza",
+        "price": null,
+        "offer_price": null,
+        "description": "Caja: 18 bolsas (408 gr c/u). Bolsa: 24 unidades. Unidad: 17 gr.",
+        "country": "Brasil",
+        "photo": "POP-001.jpg",
+        "notes": "Bolsa $2.000",
+        "is_new": false
+      },
+      {
+        "sku": "POP-002",
+        "name": "Pop Boom Chupetin Chicle Pinta Lenguas Azul",
+        "price": null,
+        "offer_price": null,
+        "description": "Tongue Painter Blue. Caja: 18 bolsas (408 gr c/u). Bolsa: 24 unidades. Unidad: 17 gr.",
+        "country": "Brasil",
+        "photo": "POP-002.jpg",
+        "notes": "Bolsa $2.000",
+        "is_new": false
+      },
+      {
+        "sku": "POP-003",
+        "name": "Pop Boom Chupetin Chicle Mango",
+        "price": null,
+        "offer_price": null,
+        "description": "Caja: 18 bolsas (408 gr c/u). Bolsa: 24 unidades. Unidad: 17 gr.",
+        "country": "Brasil",
+        "photo": "POP-003.jpg",
+        "notes": "Bolsa $2.000",
+        "is_new": false
+      },
+      {
+        "sku": "POP-004",
+        "name": "Pop Boom Chupetin Masticable Dulce de Leche",
+        "price": null,
+        "offer_price": null,
+        "description": "Chewy filled lollipop. Caja: 18 bolsas (408 gr c/u). Bolsa: 24 unidades. Unidad: 17 gr.",
+        "country": "Brasil",
+        "photo": "POP-004.jpg",
+        "notes": "Bolsa $2.000",
+        "is_new": false
+      }
+    ],
+    "BERBAU MIX": [
+      {
+        "sku": "BER-001",
+        "name": "Berbau Mix Pinata Bolsa 1.2kg",
+        "price": null,
+        "offer_price": null,
+        "description": "Mix surtido de golosinas para pinata. Bolsa 1.2 kg.",
+        "country": "Brasil",
+        "photo": "BER-001.jpg",
+        "notes": "Bolsa $5.250",
+        "is_new": false
+      }
+    ],
+    "JAZAM - TUBITOS": [
+      {
+        "sku": "TUB-001",
+        "name": "Jazam Tubitos de Mani Pacoca Pote 50u",
+        "price": null,
+        "offer_price": null,
+        "description": "Caja: 6 potes. Pote: 50 unidades.",
+        "country": "Brasil",
+        "photo": "TUB-001.jpg",
+        "notes": "Pote $6.000",
+        "is_new": false
+      }
+    ],
+    "GOLD CAFE": [
+      {
+        "sku": "GOL-001",
+        "name": "Gold Cafe Cappuccino Display 8 sobres",
+        "price": null,
+        "offer_price": null,
+        "description": "Cafe en sobre. Rinde 8 tazas.",
+        "country": "Chile",
+        "photo": "GOL-001.jpg",
+        "notes": "Sobre $440",
+        "is_new": false
+      },
+      {
+        "sku": "GOL-002",
+        "name": "Gold Cafe Caramel Latte Display 8 sobres",
+        "price": null,
+        "offer_price": null,
+        "description": "Cafe en sobre. Rinde 8 tazas.",
+        "country": "Chile",
+        "photo": "GOL-002.jpg",
+        "notes": "Sobre $440",
+        "is_new": false
+      },
+      {
+        "sku": "GOL-003",
+        "name": "Gold Cafe Vainilla Latte Display 8 sobres",
+        "price": null,
+        "offer_price": null,
+        "description": "Cafe en sobre. Rinde 8 tazas.",
+        "country": "Chile",
+        "photo": "GOL-003.jpg",
+        "notes": "Sobre $440",
+        "is_new": false
+      },
+      {
+        "sku": "GOL-004",
+        "name": "Gold Cafe Choco Moka Latte Display 8 sobres",
+        "price": null,
+        "offer_price": null,
+        "description": "Cafe en sobre. Rinde 8 tazas.",
+        "country": "Chile",
+        "photo": "GOL-004.jpg",
+        "notes": "Sobre $440",
+        "is_new": false
+      }
+    ],
+    "EXTRA LIFE": [
+      {
+        "sku": "EXT-001",
+        "name": "Extra Life Sobres Hidratantes Pack 20u",
+        "price": null,
+        "offer_price": null,
+        "description": "Sin azucar. 6 electrolitos, 7 minerales, 5 vitaminas. Sabores: Berry Blast, Mango Fusion, Tropical Delight, Sensation. Disolver 1 sachet (15 gr) en 500 ml de agua.",
+        "country": "Chile",
+        "photo": "EXT-001.jpg",
+        "notes": "Pack $28.000 - Unidad $1.400",
+        "is_new": false
+      }
+    ],
+    "REPOSTERIA - COLORETI": [
+      {
+        "sku": "REP-001",
+        "name": "Coloreti Mini Bolsa 1kg",
+        "price": null,
+        "offer_price": null,
+        "description": "Ideal para hornear. No pierde color. Contiene cacao.",
+        "country": "Brasil",
+        "photo": "REP-001.jpg",
+        "notes": "Bolsa $6.850",
+        "is_new": false
+      },
+      {
+        "sku": "REP-002",
+        "name": "Coloreti Tradicional Bolsa 1kg",
+        "price": null,
+        "offer_price": null,
+        "description": "Ideal para hornear. No pierde color. Contiene cacao.",
+        "country": "Brasil",
+        "photo": "REP-002.jpg",
+        "notes": "Bolsa $6.850",
+        "is_new": false
+      },
+      {
+        "sku": "REP-003",
+        "name": "Coloreti Granuleti Bolsa 900gr NUEVO",
+        "price": null,
+        "offer_price": null,
+        "description": "Granillo fino colorido. Ideal para hornear. No pierde color.",
+        "country": "Brasil",
+        "photo": "REP-003.jpg",
+        "notes": "Bolsa $6.850",
+        "is_new": true
+      }
+    ],
+    "REPOSTERIA - JAZAM CHOCOMAIS": [
+      {
+        "sku": "REP-004",
+        "name": "Chocomais Granulado de Chocolate 500gr NUEVO",
+        "price": null,
+        "offer_price": null,
+        "description": "COD 20715. Sin lactosa. Granillo crocante. Ideal para hornear. Caja: 20 bolsas. Bolsa: 500 gr.",
+        "country": "Brasil",
+        "photo": "REP-004.jpg",
+        "notes": "Bolsa $2.750",
+        "is_new": true
+      },
+      {
+        "sku": "REP-005",
+        "name": "Chocomais Chips de Chocolate 1kg NUEVO",
+        "price": null,
+        "offer_price": null,
+        "description": "COD 20821. Formato gota. Ideal para hornear. Caja: 15 bolsas. Bolsa: 1 kg.",
+        "country": "Brasil",
+        "photo": "REP-005.jpg",
+        "notes": "Bolsa $5.450",
+        "is_new": true
+      },
+      {
+        "sku": "REP-006",
+        "name": "Chocomais Top Cobertura Amarga 1kg NUEVO",
+        "price": null,
+        "offer_price": null,
+        "description": "Sin choque termico. Formato gotas. Cobertura chocolate medio amargo. Bolsa 1 kg.",
+        "country": "Brasil",
+        "photo": "REP-006.jpg",
+        "notes": "Bolsa $5.450",
+        "is_new": true
+      },
+      {
+        "sku": "REP-007",
+        "name": "Chocomais Top Cobertura Blanca 1kg NUEVO",
+        "price": null,
+        "offer_price": null,
+        "description": "Sin choque termico. Formato gotas. Cobertura chocolate blanco. Bolsa 1 kg.",
+        "country": "Brasil",
+        "photo": "REP-007.jpg",
+        "notes": "Bolsa $5.450",
+        "is_new": true
+      },
+      {
+        "sku": "REP-008",
+        "name": "Chocomais Top Cobertura de Leche 1kg NUEVO",
+        "price": null,
+        "offer_price": null,
+        "description": "Sin choque termico. Formato gotas. Cobertura chocolate con leche. Bolsa 1 kg.",
+        "country": "Brasil",
+        "photo": "REP-008.jpg",
+        "notes": "Bolsa $5.450",
+        "is_new": true
+      }
+    ]
+  }
+}

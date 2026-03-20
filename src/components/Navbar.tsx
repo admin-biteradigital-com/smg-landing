@@ -16,15 +16,6 @@ export default function Navbar() {
           className="h-[34px] w-auto brightness-0 invert"
           priority
         />
-        <a
-          href={whatsappLink(WHATSAPP_MESSAGES.general)}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="inline-flex items-center gap-2 bg-[#25D366] text-white font-bold text-[0.82rem] tracking-wide px-5 py-2.5 rounded-full transition-all hover:scale-[1.04] hover:shadow-[0_4px_18px_rgba(37,211,102,0.32)] whitespace-nowrap"
-        >
-          <WhatsAppIcon className="w-4 h-4 fill-white shrink-0" />
-          <span className="max-[480px]:hidden">Escribinos</span>
-        </a>
       </div>
     </nav>
   );

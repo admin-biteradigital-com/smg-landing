@@ -87,20 +87,6 @@ export default function WhyUs() {
                 </span>
               ))}
             </div>
-            <div className="mt-7 relative z-[1]">
-              <div className="text-[0.7rem] font-bold tracking-[0.15em] uppercase text-[var(--muted)] mb-3.5">
-                Contacto directo
-              </div>
-              <a
-                href={whatsappLink(WHATSAPP_MESSAGES.general)}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2.5 bg-[#25D366] text-white font-bold text-[0.96rem] px-7 py-3.5 rounded-full shadow-[0_6px_24px_rgba(37,211,102,0.28)] transition-all hover:translate-y-[-2px] hover:scale-[1.03] hover:shadow-[0_10px_32px_rgba(37,211,102,0.38)]"
-              >
-                <WhatsAppIcon className="w-5 h-5 fill-white shrink-0" />
-                Escribir ahora
-              </a>
-            </div>
           </div>
         </div>
       </div>

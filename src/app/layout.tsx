@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Sora, Instrument_Serif } from "next/font/google";
+import { Analytics } from "@vercel/analytics/react";
 import "./globals.css";
+import FloatingWhatsApp from "@/components/FloatingWhatsApp";
 
 const sora = Sora({
   subsets: ["latin"],
@@ -51,7 +53,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="es" className={`${sora.variable} ${instrumentSerif.variable}`}>
-      <body className="antialiased">{children}</body>
+      <body className="antialiased">
+        {children}
+        <FloatingWhatsApp />
+        <Analytics />
+      </body>
     </html>
   );
 }

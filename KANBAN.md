@@ -4,11 +4,10 @@ Este tablero gestiona el flujo de trabajo continuo del proyecto combinando Sprin
 
 ## 📋 Backlog (Ready for Pull)
 
-- [ ] **STORY 3.1:** Lógica Vanilla JS para parametrizar mensajes de WhatsApp dinámicos según el botón pulsado.
-- [ ] **STORY 3.2:** *Scroll Reveal Animations* (Vanilla JS IntersectionObserver).
 - [ ] **STORY 3.3:** Optimización WebP de Assets / Favicon.
 - [ ] **STORY 4.1:** Auditoría de Performance (Web Design Guidelines).
 - [ ] **STORY 4.2:** Despliegue CI/CD local hacia Cloudflare Pages.
+- [ ] **STORY 5.1:** Ejecutar QA/QC Post-Deploy (SSL Labs, Security Headers, MDN Observatory, HSTS Preload, CSP Evaluator, PageSpeed).
 
 ## 🏃 Sprint 1: Estructura, Hero y Conversión Base (WIP Limit: 3)
 
@@ -25,13 +24,15 @@ Este tablero gestiona el flujo de trabajo continuo del proyecto combinando Sprin
 
 ## ✅ Done
 
+- [x] **STORY 1.3:** Regeneración IA de Logo y Portada Ultra HD (Alta resolución con fondo transparente implementado).
+- [x] **STORY 3.1:** Implementar Floating WhatsApp Button universal y limpiar botones redundantes para mejorar diseño estético.
+- [x] **STORY 3.2:** Integrar Analítica de Vercel (Tracking).
 - [x] **EPIC 1:** PRD y alcance estratégico finalizados. Setup del Agente con Skills oficiales (Cloudflare, React, PM).
-- [x] *(Bloqueado)* **STORY 1.3:** Regeneración IA de Logo y Portada Ultra HD. (Esperando liberación de cuota API).
 - [x] **STORY 1.1:** Setup Next.js + TypeScript + Tailwind CSS con SSG. Paleta de colores Navy/Orange vinculada.
 - [x] **STORY 1.2:** Base de diseño Mobile-First implementada con Tailwind responsive breakpoints.
-- [x] **STORY 2.1:** Navbar pegajoso con logo SMG y botón CTA a WhatsApp.
-- [x] **STORY 2.2:** Hero Inmersivo con panorámica de Los Lagos, anillos animados, stats bar y doble CTA.
-- [x] **STORY 2.3:** Sección "Qué Ofrecemos" (Pilares) con 3 cards hover-animadas.
-- [x] **STORY 2.4:** Sección "Nuestras Marcas" integrada dentro de "¿Por qué elegirnos?" con 12 brand tags.
-- [x] **STORY 2.5:** Grid de Categorías de Catálogo (8 categorías macro del catalog.json).
-- [x] **STORY 2.6:** Sección de Cobertura con 11 zonas + enlace "consultanos".
+- [x] **STORY 2.1:** Navbar pegajoso con logo SMG.
+- [x] **STORY 2.2:** Hero Inmersivo con panorámica de Los Lagos.
+- [x] **STORY 2.3:** Sección "Qué Ofrecemos" (Pilares).
+- [x] **STORY 2.4:** Sección "Nuestras Marcas".
+- [x] **STORY 2.5:** Grid de Categorías de Catálogo.
+- [x] **STORY 2.6:** Sección de Cobertura con 11 zonas.

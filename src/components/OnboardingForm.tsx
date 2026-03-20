@@ -33,13 +33,25 @@ export default function OnboardingForm() {
     defaultValues: { businessType: "Minimarket" },
   });
 
-  const onSubmit = (data: OnboardingData) => {
+  const onSubmit = async (data: OnboardingData) => {
     setIsSubmitting(true);
     track("b2b_form_submitted", { business_type: data.businessType });
 
+    try {
+      // 1. Post to Cloudflare Pages Function → D1 Database (Sprint 6)
+      await fetch("/api/onboarding", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(data),
+      });
+    } catch (error) {
+      console.error("Backend warning, continuing to WhatsApp fallback.");
+    }
+
+    // 2. Format Structured Payload for Sales Team
     const message = `*📍 NUEVO CLIENTE (ALTA COMERCIAL)*\n\nHola SMG, quiero registrar mi negocio para comenzar a operar. Aquí están mis datos facturables:\n\n🏢 *Datos Comerciales:*\n- Razón Social: ${data.businessName}\n- RUT: ${data.rut}\n- Rubro: ${data.businessType}\n\n🚚 *Logística:*\n- Dirección: ${data.address}\n- Fono Contacto: ${data.phone}\n\nQuedo atento para que validen mi alta y ver listados de precios.`;
 
-    // Redirigir a WhatsApp con payload estructurado
+    // 3. Fallback WhatsApp Redirect
     const url = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;
     
     setTimeout(() => {

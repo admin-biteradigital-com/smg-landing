@@ -1,12 +1,15 @@
+import dynamic from "next/dynamic";
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import Pillars from "@/components/Pillars";
-import Products from "@/components/Products";
-import WhyUs from "@/components/WhyUs";
-import Coverage from "@/components/Coverage";
-import OnboardingForm from "@/components/OnboardingForm";
-import CTAFinal from "@/components/CTAFinal";
 import Footer from "@/components/Footer";
+
+// Lazy load heavy interactive components to achieve 100/100 Core Web Vitals
+const Products = dynamic(() => import("@/components/Products"));
+const WhyUs = dynamic(() => import("@/components/WhyUs"));
+const Coverage = dynamic(() => import("@/components/Coverage"));
+const OnboardingForm = dynamic(() => import("@/components/OnboardingForm"));
+const CTAFinal = dynamic(() => import("@/components/CTAFinal"));
 
 export default function Home() {
   return (

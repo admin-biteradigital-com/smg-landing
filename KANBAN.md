@@ -18,6 +18,7 @@ Este tablero gestiona el flujo de trabajo continuo del proyecto combinando Sprin
 - [ ] **STORY 2.1:** Navbar pegajoso (Sticky) interactivo con logo y CTA directo a WhatsApp.
 - [ ] **STORY 2.2:** `Hero Inmersivo` (Panorámicas de Carretera Austral/Naturaleza) estructurado con métricas de la empresa y CTA primario. Implementar Unsplash API dev temporales para fondos hiperreales.
 - [ ] **STORY 2.3:** Vista `Quiénes Somos`: Credibilidad y presentación formal de la empresa.
+- [ ] **STORY 4.3 (ISO/GDPR):** Implementar cabeceras de seguridad CSP (ISO 27001) y asegurar minimización de datos en UX (GDPR).
 
 ## 🚧 In Progress (WIP Limit: 1)
 - [ ] *Vacío: Esperando inicio de Sprint 1.*

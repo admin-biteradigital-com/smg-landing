@@ -10,9 +10,10 @@
 * **Concepto Visual:** Fotografía aérea panorámica hiperreal estilo *Nano Banana* de los Lagos fusionado con golosinas. Paleta: `--navy`, `--orange`.
 
 ## 2. Pila Tecnológica (Tech Stack)
-- `HTML5 Semántico` / `CSS3 Flex-Grid Nativo`
-- `Vanilla JS` (Manejo único de Intersection Observer para animaciones)
-- Despliegue CI/CD local con `wrangler` a **Cloudflare Pages**.
+- `Next.js` (SSG / App Router) para arquitectura modular de vanguardia.
+- `React` + `Tailwind CSS` para el diseño del sistema de interfaz auditable.
+- `Framer Motion` para interacciones y efectos inmersivos de panorámicas.
+- Despliegue CI/CD mediante `wrangler` a **Cloudflare Pages**.
 
 ## 3. Estado Operativo y Fuentes de Verdad
 | Artefacto / Archivo | Propósito Crítico |

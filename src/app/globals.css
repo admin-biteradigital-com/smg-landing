@@ -1,0 +1,64 @@
+@import "tailwindcss";
+
+/* ── SMG Design Tokens ─────────────────────────── */
+:root {
+  --navy: #1C2B3A;
+  --navy-deep: #111D28;
+  --navy-mid: #243447;
+  --orange: #F47920;
+  --orange-dk: #D4651A;
+  --white: #FFFFFF;
+  --off-white: #F8F9FB;
+  --slate: #E2E8F0;
+  --muted: #8FA3B8;
+  --wa-green: #25D366;
+}
+
+/* ── Base Reset ────────────────────────────────── */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Sora", system-ui, sans-serif;
+  background: var(--off-white);
+  color: var(--navy);
+  overflow-x: hidden;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+/* ── Scroll Reveal ─────────────────────────────── */
+.reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: none;
+}
+
+/* ── Keyframes ─────────────────────────────────── */
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-14px); }
+}
+
+@keyframes pulse-glow {
+  0%, 100% { box-shadow: 0 0 0 6px rgba(244, 121, 32, 0.15); }
+  50% { box-shadow: 0 0 0 14px rgba(244, 121, 32, 0.05); }
+}
+
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}

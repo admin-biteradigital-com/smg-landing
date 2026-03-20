@@ -6,8 +6,6 @@ Este tablero gestiona el flujo de trabajo continuo del proyecto combinando Sprin
 
 - [ ] **STORY 3.3:** Optimización WebP de Assets / Favicon.
 - [ ] **STORY 4.1:** Auditoría de Performance (Web Design Guidelines).
-- [ ] **STORY 4.2:** Despliegue CI/CD local hacia Cloudflare Pages.
-- [ ] **STORY 5.1:** Ejecutar QA/QC Post-Deploy (SSL Labs, Security Headers, MDN Observatory, HSTS Preload, CSP Evaluator, PageSpeed).
 
 ## 🏃 Sprint 1: Estructura, Hero y Conversión Base (WIP Limit: 3)
 
@@ -24,7 +22,9 @@ Este tablero gestiona el flujo de trabajo continuo del proyecto combinando Sprin
 
 ## ✅ Done
 
-- [x] **STORY 1.3:** Regeneración IA de Logo y Portada Ultra HD (Alta resolución con fondo transparente implementado).
+- [x] **STORY 4.2:** Despliegue CI/CD hacia Cloudflare Pages completado.
+- [x] **STORY 5.1:** QA/QC Post-Deploy (SSL, Security Headers, PageSpeed, MDN, CSP) ejecutado con Grado A+.
+- [x] **STORY 1.3:** Regeneración IA de Logo y Portada Ultra HD.
 - [x] **STORY 3.1:** Implementar Floating WhatsApp Button universal y limpiar botones redundantes para mejorar diseño estético.
 - [x] **STORY 3.2:** Integrar Analítica de Vercel (Tracking).
 - [x] **EPIC 1:** PRD y alcance estratégico finalizados. Setup del Agente con Skills oficiales (Cloudflare, React, PM).

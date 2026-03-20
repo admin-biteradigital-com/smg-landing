@@ -1,30 +1,26 @@
-import Image from "next/image";
-
 export default function Footer() {
   return (
-    <footer className="bg-[#0A1420] py-7 px-7 text-center">
-      <Image
-        src="/assets/portada.png"
-        alt="SMG"
-        width={100}
-        height={26}
-        className="h-[26px] w-auto brightness-0 invert opacity-35 mx-auto mb-2.5"
-      />
-      <p className="text-[0.76rem] text-white/[0.22]">
-        Chamiza, Región de Los Lagos, Chile · © {new Date().getFullYear()} SMG ·
-        Todos los derechos reservados
-      </p>
-      <p className="text-[0.76rem] text-white/[0.22] mt-1.5">
-        Desarrollado por{" "}
-        <a
-          href="https://biteradigital.com"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="text-[var(--orange)] opacity-50 hover:opacity-100 transition-opacity"
-        >
-          Bitera Digital
-        </a>
-      </p>
+    <footer className="relative border-t border-[var(--glass-border)]">
+      <div className="max-w-[1200px] mx-auto px-6 py-10 flex flex-col md:flex-row items-center justify-between gap-4">
+        <div className="space-y-1 text-center md:text-left">
+          <div className="text-[0.82rem] font-bold text-white/80">SMG Distribuciones</div>
+          <div className="text-[0.72rem] text-[var(--muted)]">
+            Chamiza, Región de Los Lagos · Chile
+          </div>
+        </div>
+
+        <div className="text-[0.68rem] text-[var(--muted)]/60">
+          © {new Date().getFullYear()} SMG Distribuciones · Desarrollado por{" "}
+          <a
+            href="https://biteradigital.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-[var(--orange)]/70 hover:text-[var(--orange)] transition-colors"
+          >
+            Bitera Digital
+          </a>
+        </div>
+      </div>
     </footer>
   );
 }

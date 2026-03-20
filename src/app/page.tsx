@@ -6,13 +6,12 @@ import WhyUs from "@/components/WhyUs";
 import Coverage from "@/components/Coverage";
 import CTAFinal from "@/components/CTAFinal";
 import Footer from "@/components/Footer";
-import ScrollReveal from "@/components/ScrollReveal";
 
 export default function Home() {
   return (
     <>
       <Navbar />
-      <main className="hero-immediate">
+      <main>
         <Hero />
         <Pillars />
         <Products />
@@ -21,7 +20,6 @@ export default function Home() {
         <CTAFinal />
       </main>
       <Footer />
-      <ScrollReveal />
     </>
   );
 }

@@ -1,38 +1,63 @@
+"use client";
+
+import { motion } from "framer-motion";
+import { ArrowRight } from "lucide-react";
 import WhatsAppIcon from "./WhatsAppIcon";
 import { whatsappLink, WHATSAPP_MESSAGES } from "@/lib/constants";
 
 export default function CTAFinal() {
   return (
-    <section className="bg-[var(--navy-deep)] py-28 text-center relative overflow-hidden">
-      {/* Glow */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full bg-[radial-gradient(circle,rgba(244,121,32,0.13)_0%,transparent_65%)] pointer-events-none" />
+    <section className="relative py-28 overflow-hidden">
+      {/* Background gradient pulse */}
+      <div className="absolute inset-0 flex items-center justify-center">
+        <div
+          className="w-[60vw] h-[60vw] max-w-[700px] max-h-[700px] rounded-full opacity-[0.06]"
+          style={{
+            background: "radial-gradient(circle, var(--orange) 0%, transparent 70%)",
+            animation: "gradient-shift 6s ease infinite",
+            backgroundSize: "200% 200%",
+          }}
+        />
+      </div>
 
-      <div className="relative z-[1] max-w-[1140px] mx-auto px-7 reveal">
-        <div className="inline-flex items-center gap-2 text-[0.72rem] font-bold tracking-[0.18em] uppercase text-[var(--orange)] mb-3 justify-center">
-          <span className="w-5 h-[2px] bg-[var(--orange)] rounded-sm" />
-          ¿Listo para empezar?
-        </div>
-        <h2 className="text-[clamp(2.2rem,4.5vw,3.9rem)] font-extrabold tracking-tight text-white mb-3.5">
-          Tu primer pedido a un
-          <br />
-          <span className="text-[var(--orange)]">mensaje</span> de distancia
-        </h2>
-        <p className="text-[0.98rem] leading-[1.76] text-[var(--muted)] max-w-[500px] mx-auto mb-11">
-          Escribinos por WhatsApp y te contamos cómo incorporar SMG como tu
-          proveedor. Sin contratos complicados, sin mínimos difíciles.
-        </p>
-        <a
-          href={whatsappLink(WHATSAPP_MESSAGES.firstOrder)}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="inline-flex items-center gap-3 bg-[#25D366] text-white font-bold text-[1.04rem] px-10 py-4 rounded-full shadow-[0_8px_30px_rgba(37,211,102,0.32)] transition-all hover:translate-y-[-3px] hover:scale-[1.03] hover:shadow-[0_14px_40px_rgba(37,211,102,0.42)]"
+      <div className="relative z-10 max-w-[700px] mx-auto px-6 text-center">
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.7 }}
+          className="space-y-8"
         >
-          <WhatsAppIcon className="w-6 h-6 fill-white shrink-0" />
-          Pedir por WhatsApp
-        </a>
-        <p className="text-[0.78rem] text-white/[0.28] mt-4">
-          Respondemos en horario comercial · Chamiza, Región de Los Lagos
-        </p>
+          <h2 className="text-[clamp(2rem,4vw,3rem)] font-bold tracking-tight leading-tight">
+            ¿Listo para{" "}
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[var(--orange)] to-[#FFB366]">
+              abastecer
+            </span>{" "}
+            tu negocio?
+          </h2>
+
+          <p className="text-[var(--muted)] text-[1.05rem] leading-relaxed max-w-[520px] mx-auto">
+            Escribinos por WhatsApp y recibí tu pedido en la puerta.
+            Sin mínimos, sin complicaciones, con factura electrónica.
+          </p>
+
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+            <a
+              href={whatsappLink(WHATSAPP_MESSAGES.order)}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group inline-flex items-center gap-3 bg-[var(--orange)] text-white font-bold text-[1rem] px-8 py-4.5 rounded-full shadow-[0_8px_40px_rgba(244,121,32,0.35)] transition-all duration-300 hover:shadow-[0_16px_56px_rgba(244,121,32,0.5)] hover:translate-y-[-3px]"
+            >
+              <WhatsAppIcon className="w-5 h-5 fill-white shrink-0" />
+              Pedir productos ahora
+              <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
+            </a>
+          </div>
+
+          <p className="text-[0.75rem] text-[var(--muted)]/60">
+            Horario: Lunes a Viernes · Respuesta en minutos
+          </p>
+        </motion.div>
       </div>
     </section>
   );

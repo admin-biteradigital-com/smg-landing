@@ -1,94 +1,95 @@
-import WhatsAppIcon from "./WhatsAppIcon";
-import { whatsappLink, WHATSAPP_MESSAGES, BRANDS } from "@/lib/constants";
+"use client";
+
+import { motion } from "framer-motion";
+import { ShieldCheck, Zap, BarChart3 } from "lucide-react";
+import { BRANDS } from "@/lib/constants";
+
+const REASONS = [
+  {
+    icon: ShieldCheck,
+    title: "Confianza probada",
+    desc: "Representamos marcas líderes de Brasil y la región. Cada producto pasa por nuestro control de calidad.",
+  },
+  {
+    icon: Zap,
+    title: "Entrega express",
+    desc: "Sistema de autoventa en ruta: pedís hoy, te llega mañana. Sin mínimos de compra.",
+  },
+  {
+    icon: BarChart3,
+    title: "Impulso comercial",
+    desc: "Te ayudamos a rotar stock con productos de alta demanda y márgenes atractivos.",
+  },
+];
 
 export default function WhyUs() {
-  const reasons = [
-    {
-      title: "Entrega directa en tu local",
-      text: "Sin que tengas que moverte. El camión llega hasta vos con todo lo que pediste.",
-    },
-    {
-      title: "Productos frescos, control de vencimiento",
-      text: "Sistema FEFO: los productos más próximos a vencer salen primero. Calidad garantizada.",
-    },
-    {
-      title: "Facturación electrónica incluida",
-      text: "Boleta o factura electrónica en cada venta. Todo en regla con el SII, sin vueltas.",
-    },
-    {
-      title: "Atención directa por WhatsApp",
-      text: "Hablás directo con nosotros. Pedido, consulta o reclamo: respondemos en minutos.",
-    },
-  ];
-
   return (
-    <section id="porque" className="bg-[var(--off-white)] py-24">
-      <div className="max-w-[1140px] mx-auto px-7 grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-20 items-center">
-        {/* Reasons */}
-        <div className="reveal">
-          <div className="inline-flex items-center gap-2 text-[0.72rem] font-bold tracking-[0.18em] uppercase text-[var(--orange)] mb-3">
-            <span className="w-5 h-[2px] bg-[var(--orange)] rounded-sm" />
-            ¿Por qué elegirnos?
-          </div>
-          <h2 className="text-[clamp(2rem,3.5vw,2.9rem)] font-extrabold leading-[1.1] tracking-tight text-[var(--navy)] mb-3">
-            Más que un proveedor,
-            <br />
-            un socio de tu negocio
+    <section className="relative py-28 overflow-hidden">
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[700px] bg-[var(--orange)] opacity-[0.02] rounded-full blur-[120px]" />
+
+      <div className="relative z-10 max-w-[1200px] mx-auto px-6">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-80px" }}
+          transition={{ duration: 0.6 }}
+          className="text-center mb-16"
+        >
+          <span className="text-[0.72rem] font-bold tracking-[0.2em] uppercase text-[var(--orange)]">
+            Diferencial
+          </span>
+          <h2 className="text-[clamp(1.8rem,3.5vw,2.6rem)] font-bold mt-3 tracking-tight">
+            ¿Por qué elegir{" "}
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[var(--orange)] to-[#FFB366]">
+              SMG
+            </span>
+            ?
           </h2>
-          <p className="text-[0.96rem] leading-[1.76] text-[var(--muted)]">
-            Trabajamos con negocios de todos los tamaños. Tu pedido es
-            importante sin importar si sos un almacén de barrio o una cadena de
-            kioscos.
-          </p>
-          <div className="flex flex-col gap-5 mt-9">
-            {reasons.map((r, i) => (
-              <div key={i} className="flex gap-4 items-start reveal">
-                <div className="shrink-0 mt-1.5 w-2.5 h-2.5 rounded-full bg-[var(--orange)] shadow-[0_0_0_4px_rgba(244,121,32,0.15)]" />
-                <div>
-                  <h4 className="text-[0.96rem] font-bold text-[var(--navy)] mb-0.5">
-                    {r.title}
-                  </h4>
-                  <p className="text-[0.86rem] leading-[1.72] text-[#607080]">
-                    {r.text}
-                  </p>
-                </div>
+        </motion.div>
+
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
+          {REASONS.map((r, i) => (
+            <motion.div
+              key={r.title}
+              initial={{ opacity: 0, y: 25 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: i * 0.1, duration: 0.6 }}
+              className="glass glass-hover rounded-2xl p-7 transition-all duration-500 hover:translate-y-[-3px]"
+            >
+              <div className="w-10 h-10 rounded-lg bg-[var(--orange)]/10 flex items-center justify-center mb-5">
+                <r.icon className="w-5 h-5 text-[var(--orange)]" />
               </div>
+              <h3 className="text-[1.05rem] font-bold mb-2">{r.title}</h3>
+              <p className="text-[0.85rem] text-[var(--muted)] leading-relaxed">{r.desc}</p>
+            </motion.div>
+          ))}
+        </div>
+
+        {/* Brands */}
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8 }}
+          className="glass rounded-2xl p-8"
+        >
+          <div className="text-center mb-6">
+            <span className="text-[0.72rem] font-bold tracking-[0.2em] uppercase text-[var(--muted)]">
+              Nuestras marcas
+            </span>
+          </div>
+          <div className="flex flex-wrap justify-center gap-3">
+            {BRANDS.map((b) => (
+              <span
+                key={b}
+                className="text-[0.78rem] font-semibold px-4 py-2 rounded-full border border-[var(--glass-border)] text-[var(--muted)] hover:text-[var(--orange)] hover:border-[var(--orange)]/30 transition-all duration-300 cursor-default"
+              >
+                {b}
+              </span>
             ))}
           </div>
-        </div>
-
-        {/* Panel + Brands */}
-        <div className="reveal">
-          <div className="bg-[var(--navy)] rounded-3xl p-12 relative overflow-hidden">
-            <div className="absolute -bottom-20 -right-20 w-[260px] h-[260px] rounded-full bg-[radial-gradient(circle,rgba(244,121,32,0.2)_0%,transparent_65%)]" />
-            <p className="font-[var(--font-instrument)] italic text-[3rem] leading-[1.05] text-[var(--orange)] mb-4 relative z-[1]">
-              &ldquo;Bueno,
-              <br />
-              Rico y
-              <br />
-              Barato.&rdquo;
-            </p>
-            <p className="text-[0.91rem] leading-[1.76] text-[var(--muted)] mb-7 relative z-[1]">
-              Eso es lo que llevamos a cada ruta. Productos que se venden, a
-              precios que te convienen, con la puntualidad que tu negocio
-              necesita.
-            </p>
-            <hr className="border-t border-white/[0.07] mb-6" />
-            <div className="text-[0.7rem] font-bold tracking-[0.15em] uppercase text-[var(--muted)] mb-3.5 relative z-[1]">
-              Nuestras Marcas
-            </div>
-            <div className="flex flex-wrap gap-2 relative z-[1]">
-              {BRANDS.map((brand) => (
-                <span
-                  key={brand}
-                  className="text-[0.72rem] font-semibold px-3 py-1.5 rounded-full border border-white/10 text-[var(--muted)] transition-all hover:border-[var(--orange)] hover:text-[var(--orange)]"
-                >
-                  {brand}
-                </span>
-              ))}
-            </div>
-          </div>
-        </div>
+        </motion.div>
       </div>
     </section>
   );

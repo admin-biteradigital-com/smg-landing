@@ -240,7 +240,7 @@ export default function OnboardingForm() {
                  )}
                </button>
                <p className="text-center text-[0.65rem] text-[var(--muted)]/70">
-                 Al dar click, serás redirigido a WhatsApp con tus datos pre-escritos para su procesamiento en el CRM (SIGLO).
+                 Al dar click, serás redirigido a WhatsApp con tus datos pre-escritos para su procesamiento comercial.
                </p>
             </form>
           </motion.div>

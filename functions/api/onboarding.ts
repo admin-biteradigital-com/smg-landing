@@ -2,8 +2,89 @@ import type { PagesFunction, D1Database, Response as CFResponse } from "@cloudfl
 
 interface Env {
   DB: D1Database;
-  RESEND_API_KEY: string;
+  GOOGLE_SERVICE_ACCOUNT_EMAIL?: string;
+  GOOGLE_PRIVATE_KEY?: string;
+  WHATSAPP_NUMBER?: string;
   TURNSTILE_SECRET_KEY?: string;
+}
+
+// ── Google Workspace API Helper ──
+async function sendEmailViaGmail(
+  serviceAccountEmail: string,
+  privateKeyPem: string,
+  to: string,
+  subject: string,
+  htmlBody: string
+): Promise<void> {
+  const now = Math.floor(Date.now() / 1000);
+  const header = btoa(JSON.stringify({ alg: "RS256", typ: "JWT" }));
+  const payload = btoa(JSON.stringify({
+    iss: serviceAccountEmail,
+    sub: "noreply@biteradigital.com",
+    scope: "https://www.googleapis.com/auth/gmail.send",
+    aud: "https://oauth2.googleapis.com/token",
+    iat: now,
+    exp: now + 3600,
+  }));
+
+  const pemBody = privateKeyPem
+    .replace(/-----BEGIN.*?-----/g, "")
+    .replace(/-----END.*?-----/g, "")
+    .replace(/\s/g, "");
+  const keyData = Uint8Array.from(atob(pemBody), c => c.charCodeAt(0));
+  
+  const cryptoKey = await crypto.subtle.importKey(
+    "pkcs8", keyData,
+    { name: "RSASSA-PKCS1-v1_5", hash: "SHA-256" },
+    false, ["sign"]
+  );
+  
+  const signingInput = `${header}.${payload}`;
+  const signature = await crypto.subtle.sign(
+    "RSASSA-PKCS1-v1_5",
+    cryptoKey,
+    new TextEncoder().encode(signingInput)
+  );
+  
+  const jwt = `${signingInput}.${btoa(String.fromCharCode(...new Uint8Array(signature))).replace(/\+/g, "-").replace(/\//g, "_").replace(/=+$/, "")}`;
+
+  const tokenRes = await fetch("https://oauth2.googleapis.com/token", {
+    method: "POST",
+    headers: { "Content-Type": "application/x-www-form-urlencoded" },
+    body: `grant_type=urn:ietf:params:oauth:grant-type:jwt-bearer&assertion=${jwt}`,
+  });
+  
+  const { access_token } = await tokenRes.json() as { access_token: string };
+
+  const emailRaw = [
+    `From: SMG Onboarding <noreply@biteradigital.com>`,
+    `To: ${to}`,
+    `Subject: ${subject}`,
+    `MIME-Version: 1.0`,
+    `Content-Type: text/html; charset=utf-8`,
+    ``,
+    htmlBody,
+  ].join("\r\n");
+  
+  const encodedEmail = btoa(unescape(encodeURIComponent(emailRaw)))
+    .replace(/\+/g, "-").replace(/\//g, "_").replace(/=+$/, "");
+
+  const sendRes = await fetch(
+    "https://gmail.googleapis.com/gmail/v1/users/me/messages/send",
+    {
+      method: "POST",
+      headers: {
+        Authorization: `Bearer ${access_token}`,
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ raw: encodedEmail }),
+    }
+  );
+
+  if (!sendRes.ok) {
+    const err = await sendRes.text();
+    throw new Error(`Gmail API error: ${sendRes.status} ${err}`);
+  }
 }
 
 export const onRequestPost: PagesFunction<Env> = async (context) => {
@@ -71,18 +152,19 @@ export const onRequestPost: PagesFunction<Env> = async (context) => {
        VALUES (?, ?, ?, ?, ?)`
     ).bind(businessName, rut, address, phone, businessType).run();
 
-    console.log("[D1] Lead B2B insertado:", result.meta.last_row_id);
+    console.log("[D1] Lead insertado. Último ID:", result.meta.last_row_id);
 
-    // Send Email via Resend natively (bypass SDK Edge bugs)
-    let emailStatus = "Saltado (No hay API Key configurada)";
+    // Send Email via Gmail API (Google Workspace)
+    let emailStatus = "Saltado (No hay GOOGLE_SERVICE_ACCOUNT_EMAIL o GOOGLE_PRIVATE_KEY)";
     
-    if (env.RESEND_API_KEY) {
+    if (env.GOOGLE_SERVICE_ACCOUNT_EMAIL && env.GOOGLE_PRIVATE_KEY) {
       try {
-        const emailPayload = {
-          from: "SMG Onboarding <onboarding@resend.dev>",
-          to: "administracion@biteradigital.com", // This MUST match the Resend verified email
-          subject: `🚀 Alta Comercial: ${businessName} (${businessType})`,
-          html: `
+        await sendEmailViaGmail(
+          env.GOOGLE_SERVICE_ACCOUNT_EMAIL,
+          env.GOOGLE_PRIVATE_KEY,
+          "administracion@biteradigital.com",
+          `🚀 Alta Comercial: ${businessName} (${businessType})`,
+          `
             <h2>Nuevo Lead B2B Capturado</h2>
             <p>Un nuevo cliente ha completado el formulario de alta comercial en la Landing Page.</p>
             <ul>
@@ -93,29 +175,12 @@ export const onRequestPost: PagesFunction<Env> = async (context) => {
               <li><strong>Rubro:</strong> ${businessType}</li>
             </ul>
             <p>Revisa la base de datos D1 en Cloudflare para más detalles.</p>
-          `,
-        };
-
-        const res = await fetch("https://api.resend.com/emails", {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-            "Authorization": `Bearer ${env.RESEND_API_KEY}`
-          },
-          body: JSON.stringify(emailPayload)
-        });
-
-        const data = (await res.json()) as Record<string, unknown>;
-
-        if (!res.ok) {
-          console.error("[Resend] API Error:", data);
-          emailStatus = `Fallo HTTP Resend: ${data.message || res.statusText}`;
-        } else {
-          console.log("[Resend] Email de notificación enviado exitosamente.", data);
-          emailStatus = `Enviado OK (ID: ${data.id})`;
-        }
+          `
+        );
+        console.log("[Gmail] Email de notificación enviado exitosamente.");
+        emailStatus = "Enviado OK";
       } catch (emailError: unknown) {
-        console.error("[Resend] Excepción Fatal al enviar email:", emailError);
+        console.error("[Gmail] Excepción Fatal al enviar email:", emailError);
         emailStatus = `Excepción Fetch: ${emailError instanceof Error ? emailError.message : String(emailError)}`;
       }
     }

@@ -20,9 +20,8 @@ const instrumentSerif = Instrument_Serif({
 });
 
 export const metadata: Metadata = {
-  title: "SMG — Bueno, Rico y Barato | Distribución de Golosinas en Los Lagos",
-  description:
-    "Distribución de golosinas y snacks al por mayor en la Región de Los Lagos. Abastecemos Frutillar, Puerto Varas, Puerto Montt y la Carretera Austral hasta Hornopirén. Facturación y Autoventa.",
+  title: "SMG — Bueno, Rico y Barato",
+  description: "SMG por Sebastian Marin Giacomino",
   keywords: [
     "golosinas", "snacks", "distribuidora mayorista", "Los Lagos",
     "Carretera Austral", "kioscos", "minimarkets", "SMG",
@@ -32,10 +31,10 @@ export const metadata: Metadata = {
     canonical: "/",
   },
   openGraph: {
-    title: "SMG Distribuciones — Bueno, Rico y Barato",
+    title: "SMG — Bueno, Rico y Barato",
     description: "Distribución directa al por mayor de golosinas y snacks comerciales en la Región de Los Lagos.",
     url: "https://smg.biteradigital.com",
-    siteName: "SMG Distribuciones",
+    siteName: "SMG",
     images: [
       {
         url: "/assets/portada.webp",
@@ -49,15 +48,15 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "SMG Distribuciones",
+    title: "SMG",
     description: "Autoventa directa de golosinas en la Región de Los Lagos.",
   },
 };
 
 const jsonLd = {
   "@context": "https://schema.org",
-  "@type": "LocalBusiness",
-  "name": "SMG Distribuciones",
+  "@type": "Organization",
+  "name": "SMG",
   "logo": "https://smg.biteradigital.com/assets/logo.webp",
   "image": "https://smg.biteradigital.com/assets/logo.webp",
   "description": "Distribuidora mayorista de snacks, golosinas y abarrotes en la Región de Los Lagos, Chile con rutas por la Carretera Austral.",

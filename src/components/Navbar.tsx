@@ -28,7 +28,7 @@ export default function Navbar() {
         <Link href="/" className="flex items-center gap-2 group">
           <div className="flex flex-col">
             <span className="text-2xl font-black tracking-tighter text-white group-hover:text-[var(--orange)] transition-colors leading-none">SMG</span>
-            <span className="text-[0.6rem] uppercase tracking-[0.2em] text-[var(--muted)] group-hover:text-white transition-colors">Distribuciones</span>
+            <span className="text-[0.6rem] uppercase tracking-[0.2em] text-[var(--muted)] group-hover:text-white transition-colors">por Sebastian Marin Giacomino</span>
           </div>
         </Link>
 

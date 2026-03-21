@@ -8,12 +8,12 @@ const REASONS = [
   {
     icon: ShieldCheck,
     title: "Confianza probada",
-    desc: "Representamos marcas líderes de Brasil y la región. Cada producto pasa por nuestro control de calidad.",
+    desc: "Representamos marcas líderes de la región únicamente. Cada producto pasa por nuestro estricto control de calidad.",
   },
   {
     icon: Zap,
-    title: "Entrega express",
-    desc: "Sistema de autoventa en ruta: pedís hoy, te llega mañana. Sin mínimos de compra.",
+    title: "Rrutas semanales",
+    desc: "Tenemos una ruta establecida que repetimos todas las semanas, visitando cada localidad a fondo en un día específico.",
   },
   {
     icon: BarChart3,

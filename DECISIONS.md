@@ -17,3 +17,11 @@ Este registro documenta las decisiones importantes (contexto estructural, técni
 ## [2026-03] ADR 004: Reemplazo Dinámico de Assets Vectoriales
 * **Contexto:** El intento primario de utilizar agentes de inteligencia artificial para restaurar a HD el `Logo.png` excedió la cuota de la API.
 * **Decisión:** Congelar la tarea y continuar el Sprint 1 utilizando placeholders o el logo provisorio optimizado. Se retomará esta labor visual una vez levantado el rate limit.
+
+## [2026-03] ADR 005: Defensa Anti-Bot con Cloudflare Turnstile
+* **Contexto:** Se requiere protección contra scraping AI y abuso de formularios, mitigando riesgos sin perjudicar la UX como hace reCAPTCHA. (Lean Cybersecurity / ISO 31000).
+* **Decisión:** Implementar `@marsidev/react-turnstile` en el Frontend validando contra `functions/api/onboarding.ts`. Los tokens no válidos (status 403) protegerán la DB D1.
+
+## [2026-03] ADR 006: Captura de Consentimiento Explícito Zod (GDPR)
+* **Contexto:** Cumplimiento de ISO 27701 y minimización de datos.
+* **Decisión:** Se integró en `react-hook-form` una validación estricta Zod (`z.boolean().refine()`) para forzar un checkbox de Política de Privacidad, asegurando la trazabilidad de opt-in.

@@ -1,8 +1,9 @@
-import type { PagesFunction, D1Database } from "@cloudflare/workers-types";
+import type { PagesFunction, D1Database, Response as CFResponse } from "@cloudflare/workers-types";
 
 interface Env {
   DB: D1Database;
   RESEND_API_KEY: string;
+  TURNSTILE_SECRET_KEY?: string;
 }
 
 export const onRequestPost: PagesFunction<Env> = async (context) => {
@@ -12,26 +13,56 @@ export const onRequestPost: PagesFunction<Env> = async (context) => {
     const body = await request.json() as Record<string, unknown>;
 
     // Validate required fields
-    const { businessName, rut, address, phone, businessType } = body as {
+    const { businessName, rut, address, phone, businessType, turnstileToken } = body as {
       businessName: string;
       rut: string;
       address: string;
       phone: string;
       businessType: string;
+      turnstileToken?: string;
     };
 
     if (!businessName || !rut || !address || !phone || !businessType) {
       return new Response(
         JSON.stringify({ error: "Todos los campos son obligatorios." }),
         { status: 400, headers: { "Content-Type": "application/json", "Access-Control-Allow-Origin": "*" } }
-      ) as unknown as globalThis.Response;
+      ) as unknown as CFResponse;
     }
 
     if (rut.length < 8 || rut.length > 12) {
       return new Response(
         JSON.stringify({ error: "RUT inválido." }),
         { status: 400, headers: { "Content-Type": "application/json", "Access-Control-Allow-Origin": "*" } }
-      ) as unknown as globalThis.Response;
+      ) as unknown as CFResponse;
+    }
+
+    // Verify Cloudflare Turnstile Token
+    if (env.TURNSTILE_SECRET_KEY) {
+      if (!turnstileToken) {
+        return new Response(
+          JSON.stringify({ error: "Verificación de seguridad requerida (Anti-Bot)." }),
+          { status: 403, headers: { "Content-Type": "application/json", "Access-Control-Allow-Origin": "*" } }
+        ) as unknown as CFResponse;
+      }
+      
+      const formData = new FormData();
+      formData.append("secret", env.TURNSTILE_SECRET_KEY);
+      formData.append("response", turnstileToken);
+      
+      const verificationResponse = await fetch("https://challenges.cloudflare.com/turnstile/v0/siteverify", {
+        method: "POST",
+        body: formData,
+      });
+      
+      const outcome = await verificationResponse.json() as { success: boolean };
+      
+      if (!outcome.success) {
+        console.error("[Turnstile] Fallo en la verificación del token:", outcome);
+        return new Response(
+          JSON.stringify({ error: "Validación Anti-Bot fallida." }),
+          { status: 403, headers: { "Content-Type": "application/json", "Access-Control-Allow-Origin": "*" } }
+        ) as unknown as CFResponse;
+      }
     }
 
     // Insert lead into D1
@@ -102,13 +133,13 @@ export const onRequestPost: PagesFunction<Env> = async (context) => {
           "Access-Control-Allow-Origin": "*",
         },
       }
-    ) as unknown as globalThis.Response;
+    ) as unknown as CFResponse;
   } catch (error: unknown) {
     console.error("[D1] Error crítico insertando lead:", error);
     return new Response(
       JSON.stringify({ error: "Error interno del servidor." }),
       { status: 500, headers: { "Content-Type": "application/json", "Access-Control-Allow-Origin": "*" } }
-    ) as unknown as globalThis.Response;
+    ) as unknown as CFResponse;
   }
 };
 
@@ -121,5 +152,5 @@ export const onRequestOptions: PagesFunction = async () => {
       "Access-Control-Allow-Methods": "POST, OPTIONS",
       "Access-Control-Allow-Headers": "Content-Type",
     },
-  }) as unknown as globalThis.Response;
+  }) as unknown as CFResponse;
 };

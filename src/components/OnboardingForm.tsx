@@ -1,13 +1,14 @@
 "use client";
 
 import { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion } from "framer-motion";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
 import { Send, MapPin, Store, FileText, CheckCircle2 } from "lucide-react";
+import { Turnstile } from "@marsidev/react-turnstile";
 import { track } from "@vercel/analytics";
-import { whatsappLink, WHATSAPP_NUMBER } from "@/lib/constants";
+import { WHATSAPP_NUMBER } from "@/lib/constants";
 import WhatsAppIcon from "./WhatsAppIcon";
 
 const onboardingSchema = z.object({
@@ -16,12 +17,16 @@ const onboardingSchema = z.object({
   address: z.string().min(5, "La dirección exacta es requerida para logística"),
   phone: z.string().min(8, "Ingresa un teléfono de contacto válido"),
   businessType: z.enum(["Kiosco", "Minimarket", "Almacén", "Mayorista", "Otro"]),
+  acceptTerms: z.boolean().refine((val) => val === true, {
+    message: "Debes aceptar la Política de Privacidad",
+  }),
 });
 
 type OnboardingData = z.infer<typeof onboardingSchema>;
 
 export default function OnboardingForm() {
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [turnstileToken, setTurnstileToken] = useState<string | null>(null);
 
   const {
     register,
@@ -42,9 +47,9 @@ export default function OnboardingForm() {
       await fetch("/api/onboarding", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(data),
+        body: JSON.stringify({ ...data, turnstileToken }),
       });
-    } catch (error) {
+    } catch {
       console.error("Backend warning, continuing to WhatsApp fallback.");
     }
 
@@ -183,10 +188,40 @@ export default function OnboardingForm() {
                  </select>
                </div>
 
+               {/* GDPR Terms & Turnstile */}
+               <div className="space-y-4 pb-2">
+                 <label className="flex items-start gap-3 cursor-pointer">
+                   <div className="flex items-center h-5 mt-0.5">
+                     <input
+                       type="checkbox"
+                       {...register("acceptTerms")}
+                       className="w-4 h-4 bg-[var(--navy-mid)] border-[var(--glass-border)] rounded text-[var(--orange)] focus:ring-[var(--orange)] focus:ring-offset-[var(--navy-deep)]"
+                     />
+                   </div>
+                   <div className="text-[0.75rem] text-[var(--muted)] leading-tight">
+                     Confirmo que he leído y acepto la{" "}
+                     <a href="/privacy-policy" target="_blank" className="text-[var(--orange)] underline hover:text-[#FFB366] transition-colors">
+                       Política de Privacidad
+                     </a>{" "}
+                     y autorizo el almacenamiento de mis datos para gestión comercial (GDPR/ISO 27701).
+                   </div>
+                 </label>
+                 {errors.acceptTerms && <p className="text-red-400 text-[0.7rem]">{errors.acceptTerms.message}</p>}
+                 
+                 {/* Cloudflare Turnstile */}
+                 <div className="flex justify-center w-full min-h-[65px]">
+                   <Turnstile
+                     siteKey="1x00000000000000000000AA"
+                     onSuccess={(token) => setTurnstileToken(token)}
+                     options={{ theme: "dark" }}
+                   />
+                 </div>
+               </div>
+
                {/* Submit State */}
                <button
                  type="submit"
-                 disabled={isSubmitting || !isValid}
+                 disabled={isSubmitting || !isValid || !turnstileToken}
                  className="w-full flex items-center justify-center gap-3 bg-[var(--orange)] disabled:bg-[var(--navy-mid)] disabled:text-[var(--muted)] text-white font-bold text-[0.95rem] py-4.5 rounded-xl shadow-[0_8px_32px_rgba(244,121,32,0.3)] transition-all duration-300 hover:shadow-[0_12px_44px_rgba(244,121,32,0.45)] hover:-translate-y-1 active:scale-[0.98]"
                >
                  {isSubmitting ? (

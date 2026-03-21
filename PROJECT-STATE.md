@@ -24,5 +24,5 @@
 | **`.agents/skills/`** | Cerebro extendido: Instrucciones de React/Cloudflare y PM incorporadas. |
 
 ## 4. Agente - Next Immediate Action
-Actualmente, el PRD está finalizado. La **siguiente tarea mandatoria** para el modelo de código es:
-👉 Consultar `/KANBAN.md` en "Sprint 1: To Do", e iniciar la codificación de `index.html`, setear las variables CSS globales `--navy` y enlazar las fuentes Google Fonts base de la organización.
+Actualmente, el Sprint 2 (Compliance y Seguridad B2B) ha sido completado. La **siguiente tarea mandatoria** para el modelo de código es:
+👉 Consultar `/ROADMAP.md` y `KANBAN.md` para iniciar el **Sprint 3 (STORY 6.1: Dashboard CRM o 6.2: Catálogo B2B)**.

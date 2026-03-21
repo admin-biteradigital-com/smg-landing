@@ -4,13 +4,12 @@ Este tablero gestiona el flujo de trabajo continuo del proyecto combinando Sprin
 
 ## 📋 Backlog (Ready for Pull)
 
-- [ ] **STORY 3.3:** Optimización WebP de Assets / Favicon.
-- [ ] **STORY 4.1:** Auditoría de Performance (Web Design Guidelines).
+- [ ] **STORY 6.1:** Dashboard CRM Interno (Admin Panel) para gestión de Leads desde D1.
+- [ ] **STORY 6.2:** Catálogo Interactivo B2B con datos dinámicos.
 
-## 🏃 Sprint 1: Estructura, Hero y Conversión Base (WIP Limit: 3)
+## 🏃 Sprint 3: Portal B2B y ERP Sync (WIP Limit: 3)
 
-- [ ] **STORY 4.3 (ISO/GDPR):** Implementar cabeceras de seguridad CSP (ISO 27001) y asegurar minimización de datos en UX (GDPR).
-- [ ] **STORY 4.4 (Ciberseguridad/Lean/5S):** Configurar WAF básico, Rate Limiting y reglas Anti-Bot en Cloudflare. Purgar dependencias no utilizadas (Lean).
+- [ ] *Pendiente de asignación*
 
 ## 🚧 In Progress (WIP Limit: 1)
 
@@ -22,6 +21,13 @@ Este tablero gestiona el flujo de trabajo continuo del proyecto combinando Sprin
 
 ## ✅ Done
 
+- [x] **STORY 6.3 (GDPR/ISO 27701):** Casilla Opt-In explícita y enlace a Privacidad.
+- [x] **STORY 6.4 (Anti-Bot/5S):** Integración de Cloudflare Turnstile y purga/limpieza de documentación.
+
+- [x] **STORY 3.3:** Optimización WebP de Assets / Favicon.
+- [x] **STORY 4.1:** Auditoría de Performance (Web Design Guidelines).
+- [x] **STORY 4.3 (ISO/GDPR):** Implementar cabeceras CSP estructuradas en `_headers` (ISO 27001) y minimizar datos.
+- [x] **STORY 4.4 (Ciberseguridad/Lean/5S):** Configurar WAF, Rate Limiting y reglas Anti-Bot. Dependencias limpiadas (resend).
 - [x] **STORY 4.2:** Despliegue CI/CD hacia Cloudflare Pages completado.
 - [x] **STORY 5.1:** QA/QC Post-Deploy (SSL, Security Headers, PageSpeed, MDN, CSP) ejecutado con Grado A+.
 - [x] **STORY 1.3:** Regeneración IA de Logo y Portada Ultra HD.

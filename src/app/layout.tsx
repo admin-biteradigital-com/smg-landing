@@ -37,7 +37,7 @@ export const metadata: Metadata = {
     siteName: "SMG",
     images: [
       {
-        url: "/assets/portada_og.png",
+        url: "/assets/portada.webp",
         width: 1200,
         height: 630,
         alt: "SMG Portada",
@@ -50,7 +50,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "SMG",
     description: "Distribuidora oficial SMG. Únete a nuestra ruta de distribución en Los Lagos y haz tu pedido mayorista.",
-    images: ["/assets/portada_og.png"],
+    images: ["/assets/portada.webp"],
   },
 };
 
